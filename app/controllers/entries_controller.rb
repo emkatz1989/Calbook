@@ -31,7 +31,7 @@ class EntriesController < ApplicationController
 	private
 
 	def entries_params
-		params.require(:entry).permit(:user_id,:reminder, :image, :video, :text)
+		params.require(:entry).permit(:user_id, :text, :reminder, :image, :video)
 	end
 
 end

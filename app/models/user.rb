@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
 
 	has_many :entries
 
-	validates_presence_of :fullname, :username, :password
+	validates_presence_of :username, :password
+
+end
