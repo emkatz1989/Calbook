@@ -37,6 +37,9 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+#consume RESTful web api
+gem 'httparty', '~> 0.13.3'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
