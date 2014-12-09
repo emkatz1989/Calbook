@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	  if @user.save
   	  	session[:user_id]
-  	  	redirect_to entries_path(@entries)
+  	  	redirect_to entries_path(@entries), notice: "Sign Up Successful!"
   	  else 
   	  	redirect_to :back
   	  end
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-  	params.require(:user).permit(:fullname, :username, :password, :password_confirmation)
+  	params.require(:user).permit(:username, :password, :password_confirmation)
   end
 
 end

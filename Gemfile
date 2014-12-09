@@ -40,6 +40,9 @@ gem 'bcrypt', '~> 3.1.7'
 #consume RESTful web api
 gem 'httparty', '~> 0.13.3'
 
+#Use paperclip for image and video uploads
+gem "paperclip", "~> 4.2"
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
