@@ -2,7 +2,7 @@
 
 <div id="login_form">
   <%= form_for(@user,{url:sessions_path}) do |f| %> 
-  <%= f.text_field :username, :placeholder => "username", :class => "input_field" %>
+   <%= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
   <%= f.password_field :password, :placeholder => "password", :class => "input_field" %>
   <%= f.submit "submit", :class => "submit_button", :id => "submit_login_button"%>
   <% end %>
@@ -11,7 +11,8 @@
 
 <div id="signup_form">
   <%= form_for(@user) do |f| %>
-  <%= f.text_field :username, :placeholder => "create username", :class => "input_field" %>
+  <%= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
+  <%= f.text_field :email, :placeholder => "create email", :class => "input_field" %>
   <%= f.password_field :password, :placeholder => "create password", :class => "input_field" %>
   <%= f.password_field :password_confirmation, :placeholder => "confirm password", :class => "input_field"%>
   <%= f.submit "submit", :class => "submit_button", :id => "submit_signup_button" %>

@@ -30,7 +30,7 @@ class DaysController < ApplicationController
 
 	private
 
-	def days_params
+	def day_params
 		params.require(:day).permit(:user_id, :date)
 	end
 

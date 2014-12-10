@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  resources :entries
+  
   resources :users
   resources :sessions
-  
+  resources :days
+  resources :blurbs
+  resources :events
+  resources :image_videos
+  resources :tags
+  resources :tag_types
+
   root 'sessions#new'
 
 
