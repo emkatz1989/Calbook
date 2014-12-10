@@ -5,10 +5,10 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		u = User.where(username: params[:user][:username]).first
+		u = User.where(email: params[:user][:email]).first
 		if u && u.authenticate(params[:user][:password])
 			session[:user_id] = u.id.to_s
-			  redirect_to entries_path
+			  redirect_to days_path
 	    else
 	    	#go back to login page
 	    	flash[:notice] = "Invalid Input"

@@ -5,33 +5,33 @@ class DaysController < ApplicationController
 	end
 
 	def edit
-		@entry = Entry.find(params[:id])
+		@day = Day.find(params[:id])
 	end
 
 	def index
-		@entries = Entry.all 
+		@days = Day.all 
 	end
 
 	def create
 		@user_id = current_user.id
-		@entry = Entry.new(entry_params)
-		if @entry.save
-			redirect_to entries_path(@entries)
+		@day = Day.new(day_params)
+		if @day.save
+			redirect_to days_path(@days)
 		else
 			redirect_to :back
 		end
 	end
 
 	def destroy
-		@entry = Entry.find(params[:entry])
-		@entry.destroy
+		@day = Day.find(params[:day])
+		@day.destroy
 		redirect_to(:back)
 	end
 
 	private
 
-	def entries_params
-		params.require(:entry).permit(:user_id, :text, :reminder, :image, :video)
+	def days_params
+		params.require(:day).permit(:user_id, :date)
 	end
 
 end
