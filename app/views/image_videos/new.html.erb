@@ -1,0 +1,7 @@
+new.html.erb
+
+<%= form_for @image_video do |f| %>
+	<%= f.file_field :image_video %>
+    <%= f.string_field :caption %>
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,7 @@
+<%= form_for @event do |f| %>
+	<%= f.string_field :title %>
+    <%= f.text_field :text %>
+    <%= f.datetime_field :start_time %>
+    <%= f.datetime_field :end_time %>
+    <%= f.submit %>
+<% end %>

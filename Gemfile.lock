@@ -28,6 +28,8 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    av (0.7.1)
+      cocaine
     bcrypt (3.1.9)
     builder (3.2.2)
     climate_control (0.0.3)
@@ -72,6 +74,9 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paperclip-av-transcoder (0.6.2)
+      av (>= 0.7.1)
+      paperclip (>= 2.5.2)
     pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -157,7 +162,7 @@ DEPENDENCIES
   httparty (~> 0.13.3)
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 4.2)
+  paperclip-av-transcoder
   pg
   rails (= 4.1.8)
   rails_12factor
