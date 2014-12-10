@@ -10,7 +10,7 @@
 	<div id="container">
 		<div id="user_header">
 			<% if current_user %>
-			  Logged in as <%= current_user.username %>.
+			  Logged in as <%= current_user.email %>.
 			  <%= link_to "Log Out", new_session_path("current") %>
 			<% else %>
               <%= link_to "Sign_up", new_session_path %>
