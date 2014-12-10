@@ -1,6 +1,6 @@
-class EntriesController < ApplicationController
+class DaysController < ApplicationController
 	def new
-		@entry = Entry.new
+		@day = Day.new
 		create
 	end
 

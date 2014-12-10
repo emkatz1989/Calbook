@@ -11,23 +11,72 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209015720) do
+ActiveRecord::Schema.define(version: 20141210004207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "entries", force: true do |t|
-    t.string  "blurb"
-    t.string  "reminder"
-    t.string  "image"
-    t.string  "video"
-    t.integer "user_id"
+  create_table "blurbs", force: true do |t|
+    t.integer  "day_id"
+    t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "entries", ["user_id"], name: "index_user_id", using: :btree
+  add_index "blurbs", ["day_id"], name: "index_blurbs_on_day_id", using: :btree
+
+  create_table "days", force: true do |t|
+    t.integer  "user_id"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "days", ["user_id"], name: "index_days_on_user_id", using: :btree
+
+  create_table "events", force: true do |t|
+    t.integer  "day_id"
+    t.text     "text"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "calendar_id"
+    t.integer  "event_id"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["day_id"], name: "index_events_on_day_id", using: :btree
+
+  create_table "image_videos", force: true do |t|
+    t.integer  "day_id"
+    t.string   "caption"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "image_videos", ["day_id"], name: "index_image_videos_on_day_id", using: :btree
+
+  create_table "tag_types", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tag_types", ["tag_id"], name: "index_tag_types_on_tag_id", using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
-    t.string   "username"
+    t.string   "domain"
+    t.string   "fullname"
+    t.string   "email"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
