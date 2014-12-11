@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require moment
+//= require fullcalendar
 //= require_tree .
+
+$(document).on('ready page:load', function () {
+  $('#calendar').fullCalendar({
+  // put your options and callbacks here
+  })
+});

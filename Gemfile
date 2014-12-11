@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'fullcalendar-rails'
+
+gem 'momentjs-rails'
 
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -23,6 +26,9 @@ group :development, :test do
 	
 end
 
+group :development do
+  gem "better_errors"
+end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -42,10 +48,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'httparty', '~> 0.13.3'
 
 #Audio/Video Transcoder for Paperclip using FFMPEG/Avconv
-gem 'paperclip-av-transcoder'
+# gem 'paperclip-av-transcoder'
 
 #Use paperclip for image and video uploads
-# gem "paperclip", "~> 4.2"
+gem "paperclip", "~> 4.2"
 
 # Use unicorn as the app server
 # gem 'unicorn'
