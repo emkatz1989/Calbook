@@ -15,9 +15,12 @@
  *= require fullcalendar
  *= require_tree .
  
+@import "bootstrap-sprockets"
+@import "bootstrap"
 
  */
-// @import 'bootstrap';
+
+
 
 
  #signup_form{
@@ -51,6 +54,18 @@
 	background-size: cover;
 	margin: 0 auto;
 
+
+}
+
+#login_signup_container{
+	margin: 0 auto;
+	width: 30%;
+	position: relative;
+	top: 30%;
+	z-index: 100;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 70px;
 
 }
 

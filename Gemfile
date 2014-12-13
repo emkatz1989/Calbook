@@ -30,6 +30,7 @@ end
 # gem 'omniauth-google-oauth2'
 # gem 'json'
 
+
 # group :development do
 #   gem "better_errors"
 # end
@@ -58,6 +59,8 @@ gem 'httparty', '~> 0.13.3'
 gem "paperclip", "~> 4.2"
 
 gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'autoprefixer-rails'
 
 # Use unicorn as the app server
 # gem 'unicorn'
