@@ -8,9 +8,8 @@ Rails.application.routes.draw do
   resources :image_videos
   resources :tags
   resources :tag_types
-
   root 'sessions#new'
-
+  # get "/auth/:provider/callback" => 'sessions#create'
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

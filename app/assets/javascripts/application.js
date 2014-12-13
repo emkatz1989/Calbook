@@ -13,13 +13,24 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
 //= require moment
 //= require fullcalendar
+//= require fullcalendar/gcal
 //= require_tree .
 
 $(document).on('ready page:load', function () {
   $('#calendar').fullCalendar({
   // put your options and callbacks here
-  events: '/events.json'
+  dayClick: function(a,b) {
+        // alert('a day has been clicked!')
+        console.log(this, a,b);
+       
+
+    }
   })
 });
+
+
+
+

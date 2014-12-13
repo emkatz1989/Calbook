@@ -26,9 +26,13 @@ group :development, :test do
 	
 end
 
-group :development do
-  gem "better_errors"
-end
+# gem 'omniauth'
+# gem 'omniauth-google-oauth2'
+# gem 'json'
+
+# group :development do
+#   gem "better_errors"
+# end
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -52,6 +56,8 @@ gem 'httparty', '~> 0.13.3'
 
 #Use paperclip for image and video uploads
 gem "paperclip", "~> 4.2"
+
+gem 'bootstrap-sass', '~> 3.2.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'

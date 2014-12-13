@@ -9,12 +9,14 @@ class SessionsController < ApplicationController
 		u = User.find_by_email(params[:email])
 		if u && u.authenticate(params[:user][:password])
 			session[:user_id] = u.id.to_s
-			  redirect_to root_url
+			  redirect_to days_path
+			  # redirect_to root_url
 	    else
 	    	#go back to login page
 	    	flash[:notice] = "Invalid Input"
 	    	redirect_to root_url
 	    end
+	    # @auth = request.env['omniauth.auth']['credentials']
 	end
 
 	def destroy

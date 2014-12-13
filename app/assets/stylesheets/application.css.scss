@@ -14,5 +14,44 @@
  *= require_self
  *= require fullcalendar
  *= require_tree .
+ 
 
  */
+// @import 'bootstrap';
+
+
+ #signup_form{
+
+	text-align: center;
+	margin-left: 25%;
+	margin-right: auto;
+	position: relative;
+	border-radius: 90px;
+	transition: all .3s ease-in-out;
+	width: 150px;
+
+}
+
+
+#login_form{
+
+	text-align: center;
+	margin-left: 25%;
+	margin-right: auto;
+	position: relative;
+	border-radius: 90px;
+	transition: all .3s ease-in-out;
+	width: 150px;
+
+
+}
+
+#login_page_body{
+	background-image: url("http://www.learnhebrewpod.com/images/library/holidays/yom-kippur/book-of-life.jpg");
+	background-size: cover;
+	margin: 0 auto;
+
+
+}
+
+
