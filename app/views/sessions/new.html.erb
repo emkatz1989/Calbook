@@ -1,0 +1,39 @@
+<!-- new.html.erb -->
+<body id="login_page_body">
+  <%= link_to "Sign in with Google", '/auth/google_oauth2' %>
+  <h1> Welcome to Calbook </h2>
+
+    <h2> A simple lifelogging utility. </h2>
+
+      <h3> Keep a calendar </h3>
+      <h3> Log your day </h3>
+      <h3> Store the day's pictures and videos </h3>
+
+
+<div id="login_signup_container">
+
+
+
+<div id="login_form"><h1> LOGIN </h1>
+  <%= form_for(@user,{url:sessions_path}) do |f| %> 
+   <%= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
+  <%= f.password_field :password, :placeholder => "password", :class => "input_field" %>
+  <%= f.submit "submit", :class => "submit_button", :id => "submit_login_button"%>
+  <% end %>
+  <!-- <span class = "close_login_button">cancel</span> -->
+</div>
+
+<div id="signup_form"> <h1> SIGNUP </h1>
+  <%= form_for(@user) do |f| %>
+  <%= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
+  <%= f.text_field :email, :placeholder => "create email", :class => "input_field" %>
+  <%= f.password_field :password, :placeholder => "create password", :class => "input_field" %>
+  <%= f.password_field :password_confirmation, :placeholder => "confirm password", :class => "input_field"%>
+  <%= f.submit "submit", :class => "submit_button", :id => "submit_signup_button" %>
+  <% end %>
+  <!-- <span class = "close_signup_button">cancel</span> -->
+</div>
+</div>
+
+</body>
+
