@@ -21,12 +21,67 @@
 
 @import 'bootstrap';
 
-#calendar_header{
-	height: 15%;
-	width: 100%;
-	color: red;
+body{
+	// background-image: url('http://www.pulsarwallpapers.com/data/media/3/Alien%20Ink%202560X1600%20Abstract%20Background.jpg');
+	background-image: url('http://fc02.deviantart.net/fs71/i/2011/212/5/f/simple_background_by_g123u-d429kq7.jpg');
+}
+
+#calendar-container{
+	
+	padding: 20px;
+}
+
+#calendar {
+  // width: 40%
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  -moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+  box-shadow: 10px 10px 5px #888;
+  padding: 10px;
+  background-color: black;
+  // opacity: 0.7;
+  // border-radius: 30px;
 
 }
+
+#shadow-slider{
+
+	background-image: url(asset-path('shadow-slider copy.png')) no-repeat;
+
+	height:50px;	
+}
+
+
+td.fc-widget-header{
+
+	background-color: red;
+}
+
+tr{
+
+	border-radius: 10px;
+}
+
+.fc-widget-content{
+
+	background-color: rgb(245,245,245);
+}
+
+
+
+.fc-toolbar{
+	background-color: blue;
+	border: 2px solid black;
+	padding: 10px;
+	// border-radius: 10px;
+
+
+}
+
 
  #signup_form{
 
