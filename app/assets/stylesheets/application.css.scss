@@ -39,7 +39,7 @@ body{
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
   -moz-box-shadow: 10px 10px 5px #888;
-	-webkit-box-shadow: 10px 10px 5px #888;
+  -webkit-box-shadow: 10px 10px 5px #888;
   box-shadow: 10px 10px 5px #888;
   padding: 10px;
   background-color: black;
@@ -74,8 +74,9 @@ tr{
 
 
 .fc-toolbar{
-	background-color: blue;
+	background-color: black;
 	border: 2px solid black;
+	color: white;
 	padding: 10px;
 	// border-radius: 10px;
 
