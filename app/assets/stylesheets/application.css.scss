@@ -26,13 +26,9 @@ body{
 	background-image: url('http://fc02.deviantart.net/fs71/i/2011/212/5/f/simple_background_by_g123u-d429kq7.jpg');
 }
 
-#calendar-container{
-	
-	padding: 20px;
-}
 
 #calendar {
-  // width: 40%
+  // width: 50%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -43,6 +39,8 @@ body{
   box-shadow: 10px 10px 5px #888;
   padding: 10px;
   background-color: black;
+  resize: both;
+  overflow: auto;
   // opacity: 0.7;
   // border-radius: 30px;
 
@@ -50,9 +48,10 @@ body{
 
 #shadow-slider{
 
-	background-image: url(asset-path('shadow-slider copy.png')) no-repeat;
+	background-image: url("/assets/shadow-slider.png");
 
-	height:50px;	
+	height:50px;
+
 }
 
 
