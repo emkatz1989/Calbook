@@ -22,11 +22,13 @@
 $(document).on('ready page:load', function () {
   $('#calendar').fullCalendar({
   // ======put your options and callbacks here=====//
-  
+  	header: {
+  		left:   'prev',
+        center: 'title',
+        right:  'next'
+  	},
 
-
-
-    dayClick: function(date, jsEvent, view) {
+  dayClick: function(date, jsEvent, view) {
 
         alert('Clicked on: ' + date.format());
 
