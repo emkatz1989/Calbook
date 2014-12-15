@@ -24,12 +24,15 @@
 body{
 	// background-image: url('http://www.pulsarwallpapers.com/data/media/3/Alien%20Ink%202560X1600%20Abstract%20Background.jpg');
 	background-image: url('http://fc02.deviantart.net/fs71/i/2011/212/5/f/simple_background_by_g123u-d429kq7.jpg');
+	background-size: cover;
 }
 
 
 #calendar {
   // width: 50%;
   position: fixed;
+  // height: 667px;
+  // width: 900px;
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
@@ -41,19 +44,10 @@ body{
   background-color: black;
   resize: both;
   overflow: auto;
-
-  
   // opacity: 0.7;
-  // border-radius: 30px;
+  // border-radius: 10px;
 
 }
-
-header {
-  		left:   prev;
-        center: 'title';
-         right:  'next';
-  	}
-
 
 #shadow-slider{
 
@@ -79,14 +73,19 @@ tr{
 	background-color: rgb(245,245,245);
 }
 
-
+.fc-view-container{
+	// height: 667px;
+	// width: 900px;
+}
 
 .fc-toolbar{
 	background-color: black;
 	border: 2px solid black;
 	color: white;
 	padding: 10px;
-	// border-radius: 10px;
+	// height: 29px;
+	// width: 900px;
+	
 
 
 }

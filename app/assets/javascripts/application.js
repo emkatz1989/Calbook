@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require moment
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require moment
 //= require fullcalendar
 //= require fullcalendar/gcal
 //= require bootstrap
@@ -22,24 +22,59 @@
 $(document).on('ready page:load', function () {
   $('#calendar').fullCalendar({
   // ======put your options and callbacks here=====//
-  	header: {
-  		left:   'prev',
-        center: 'title',
-        right:  'next'
+  header: {
+  		left:   '',
+        center: 'prev title next',
+        right:  ''
   	},
+
+  defaultView: 'month',
+  handleWindowResize: true,
+  editable: true,
+  selectable: true,
+
+
+  // $('.fc-day').hover(function(){
+  // 	$(this).find('.fc-day-content').css('border-color', 'red');
+  // },
+  // function(){
+  // 	$(this).find('#addToggle').remove();
+  // });
+
+
+  // eventMouseover: function( event, jsEvent, view ) {
+  // $(this).css('border-color', 'red');
+
+  //  },
 
   dayClick: function(date, jsEvent, view) {
 
-        alert('Clicked on: ' + date.format());
+ //        // alert('Clicked on: ' + date.format());
 
-        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+ //        // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
 
-        alert('Current view: ' + view.name);
+ //        // alert('Current view: ' + view.name);
 
-        // change the day's background color just for fun
-        $(this).css('background-color', 'red');
+ //        // change the day's background color just for fun
+ //        $(this).css('background-color', 'red');
 
- //====DANGER ZONE=======//
+ // //====DANGER ZONE=======//
+ //        // $('#modalTitle').html(event.title);
+ //        // $('#modalBody').html(event.description);
+ //        // $('#eventUrl').attr('href',event.url);
+        $('#dayShowModal').modal();
+ //        console.log(this);
+
+
+
+
+ 		// $('#myModalLabel').html(day.date);
+ 		
+ 		
+
+
+
+
 
  		// defaultView: 'month',
  		// editable: true,
@@ -66,9 +101,7 @@ $(document).on('ready page:load', function () {
 
 
 
-  // dayClick: function(a,b) {
-  //       // alert('a day has been clicked!')
-  //       console.log(this, a,b);
+ 
        
 
   //   }
