@@ -1,6 +1,6 @@
 class BlurbsController < ApplicationController
 
-def new
+	def new
 		@blurb = Blurb.new
 		create
 	end
@@ -14,7 +14,7 @@ def new
 	end
 
 	def create
-		@user_id = current_user.id
+		# @user_id = current_user.id
 		@blurb = Blurb.new(blurb_params)
 		if @blurb.save
 			redirect_to blurbs_path(@blurbs)

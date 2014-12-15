@@ -19,10 +19,16 @@
       </div>
       <div class="modal-body" id="modalBody">
         ...
+      <%form_for(@day) do |day| %>
+        <div class="fields">
+        	<h1>day.date</h1>
+        	<%= render 'events/_form' %>
+        	<%= render 'blurbs/_form' %>
+        	<%= render 'image_videos/_form' %>
 
+        <%end%>
 
-
-
+        </div>
 
 
       </div>
