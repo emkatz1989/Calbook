@@ -16,7 +16,7 @@ class ImageVideosController < ApplicationController
 		# @user_id = current_user.id
 		@image_video = ImageVideo.new(image_video_params)
 		if @image_video.save
-			redirect_to days_path(@days)
+			redirect_to new_session_path
 		else
 			redirect_to :back
 		end

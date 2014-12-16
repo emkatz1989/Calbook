@@ -22,9 +22,33 @@
      <% @days.each do |day|%>
         <div class="fields">
         	<h1>day.date</h1>
-        	<%= render 'events/form' %>
-        	<%= render 'blurbs/form' %>
-        	<%= render 'image_videos/form' %>
+        	
+          <%= form_for @blurb do |f| %>
+            <%= f.text_field :text %>
+            <%= f.submit %>
+            <% end %>
+
+         <%= form_for @event do |f| %>
+            <%= f.text_field :title %>
+            <%= f.text_field :text %>
+            <%= f.datetime_field :start_time %>
+            <%= f.datetime_field :end_time %>
+            <%= f.submit %>
+            <% end %>
+
+        <%= form_for @image_video do |f| %>
+            <%= f.file_field :media %>
+            <%= f.text_field :caption %>
+            <%= f.submit %>
+            <% end %>
+
+
+          <%#= render 'events/form' %>
+        	<%#= render 'blurbs/form' %>
+        	<%#= render 'image_videos/form' %>
+        
+
+
         <%end%>
 
         </div>
