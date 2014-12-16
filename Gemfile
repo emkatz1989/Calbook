@@ -21,7 +21,8 @@ gem 'factory_girl_rails'
 
 group :development, :test do 
 	gem 'rspec-rails', '~> 3.0.0'
-
+	gem 'better_errors'
+	gem 'pry-rails'
 	gem 'shoulda-matchers', require: false
 	
 end
@@ -53,10 +54,12 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'httparty', '~> 0.13.3'
 
 #Audio/Video Transcoder for Paperclip using FFMPEG/Avconv
-gem 'paperclip-av-transcoder', :require => 'paperclip'
+# gem 'paperclip-av-transcoder', :require => 'paperclip'
 
 #Use paperclip for image and video uploads
-gem "paperclip", "~> 4.2"
+# gem "paperclip", "~> 4.2"
+
+gem 'paperclip-ffmpeg'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 

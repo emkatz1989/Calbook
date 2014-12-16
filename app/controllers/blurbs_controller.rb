@@ -31,7 +31,7 @@ class BlurbsController < ApplicationController
 
 	private
 
-	def blurbs_params
+	def blurb_params
 		params.require(:blurb).permit(:day_id, :text)
 	end
 

@@ -1,0 +1,5 @@
+ <%= fields_for @day, @day.event do |f| %>
+            <%= f.text_field :title %>
+            <%= f.text_field :text %>
+            <%= f.datetime_field :start_time %>
+            <%= f.datetime_field :end_time %>

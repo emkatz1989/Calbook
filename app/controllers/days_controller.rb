@@ -8,11 +8,23 @@
 		@day = Day.find(params[:id])
 	end
 
+	def update
+	   @day = Day.find(params[:id])
+    if @day.update(day_params)
+      redirect_to :back
+    else
+      render 'edit'
+    end
+  end
+
 	def index
 		@days = Day.all
-		@event = Event.new
-		@blurb= Blurb.new
-		@image_video= ImageVideo.new
+		event = Event.new
+		events= Event.all
+		blurb= Blurb.new
+		blurbs= Blurb.all
+		image_video= ImageVideo.new
+		image_videos= ImageVideo.all
 
 	end
 

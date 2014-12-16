@@ -65,32 +65,10 @@ $(document).on('ready page:load', function () {
         $('#dayShowModal').modal();
  //        console.log(this);
 
-
-
-
- 		// $('#myModalLabel').html(day.date);
- 		
- 		
-
-
-
-
-
- 		// defaultView: 'month',
- 		// editable: true,
- 		//   selectable: true,
- 		// select: function(start, end, allDay){
- 		// 	endtime = $.fullCalendar.formatDate(end, 'h:mm tt');
- 		// 	starttime = $.fullCalendar.formatDate(start, 'ddd, MMM d, h:mm tt');
- 		// 	var mywhen = starttime + ' - ' + endtime;
- 		// 	$('#dayShowModal').val
- 		// }
-
-
-
-
-
-
+        $('#save-day').on('click', function(day){
+          console.log ('triggered');
+          day_id.save 
+        });
 
 
 //====END OF DANGER ZONE====//

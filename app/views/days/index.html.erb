@@ -19,45 +19,42 @@
       </div>
       <div class="modal-body" id="modalBody">
         ...
-     <% @days.each do |day|%>
-        <div class="fields">
-        	<h1>day.date</h1>
-        	
-          <%= form_for @blurb do |f| %>
-            <%= f.text_field :text %>
-            <%= f.submit %>
-            <% end %>
 
-         <%= form_for @event do |f| %>
-            <%= f.text_field :title %>
-            <%= f.text_field :text %>
-            <%= f.datetime_field :start_time %>
-            <%= f.datetime_field :end_time %>
-            <%= f.submit %>
-            <% end %>
+    <% @days.each do |day|%>
 
-        <%= form_for @image_video do |f| %>
-            <%= f.file_field :media %>
-            <%= f.text_field :caption %>
-            <%= f.submit %>
-            <% end %>
-
-
-          <%#= render 'events/form' %>
-        	<%#= render 'blurbs/form' %>
-        	<%#= render 'image_videos/form' %>
-        
-
-
-        <%end%>
+      <%= form_for day do |d| %>
+        events:
+        <div>
+          <%= fields_for :events do |events_form| %>
+            <%= events_form.text_field :title, placeholder: 'title' %>
+            <%= events_form.text_field :text, placeholder: 'text' %>
+            <%= events_form.datetime_field :start_time, placeholder: 'start_time' %>
+            <%= events_form.datetime_field :end_time, placeholder: 'end_time' %>  
+          <% end %>
+        </div>
+        blurbs:
+        <div>
+          <%= fields_for :blurbs do |blurbs_form| %>
+              <%= blurbs_form.text_field :text, placeholder: 'text'  %>
+          <% end %>
+        </div>
+        image_videos:
+        <div>
+          <%= fields_for :image_videos do |image_form| %>
+              <%= image_form.file_field :media, placeholder: 'media'  %>
+              <%= image_form.text_field :caption, placeholder: 'caption'  %>
+          <% end %>
+        </div>
+      <%= d.submit %>
+      <%end%>
+    <%end%>
 
         </div>
-
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id= "save-day">Save changes</button>
       </div>
     </div>
   </div>
