@@ -10,10 +10,10 @@ class EventsController < ApplicationController
 	#POST /events
 
 	def create
-	  @user_id = current_user.id
+	  # @user_id = current_user.id
 	  @event = Event.new(event_params)
 		if @event.save
-			redirect_to day_path(@day)
+			redirect_to days_path(@days)
 		else
 			redirect_to :back
 		end

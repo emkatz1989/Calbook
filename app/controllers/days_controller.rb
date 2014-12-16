@@ -1,4 +1,4 @@
-class DaysController < ApplicationController
+	class DaysController < ApplicationController
 	def new
 		@day = Day.new
 		create
@@ -9,7 +9,11 @@ class DaysController < ApplicationController
 	end
 
 	def index
-		@days = Day.all 
+		@days = Day.all
+		@event = Event.new
+		@blurb= Blurb.new
+		@image_video= ImageVideo.new
+
 	end
 
 	def create

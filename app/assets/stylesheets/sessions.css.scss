@@ -2,3 +2,64 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.welcome-header{
+
+	text-align: center;
+
+
+}
+
+
+
+#signup_form{
+
+	text-align: center;
+	margin-left: 25%;
+	margin-right: auto;
+	position: relative;
+	border-radius: 90px;
+	transition: all .3s ease-in-out;
+	width: 150px;
+
+}
+
+
+#login_form{
+
+	text-align: center;
+	margin-left: 25%;
+	margin-right: auto;
+	position: relative;
+	border-radius: 90px;
+	transition: all .3s ease-in-out;
+	width: 150px;
+
+
+}
+
+#login_page_body{
+	// background-image: url("http://www.learnhebrewpod.com/images/library/holidays/yom-kippur/book-of-life.jpg");//
+	
+	// background-image: url("http://www.fubiz.net/wp-content/uploads/2013/12/Perpetual-Calendar1.jpg");
+	// background-image: url('http://www.graphicsfuel.com/wp-content/uploads/2012/02/calendar-icon-512x512.png');
+	
+	background-image: url(image-path('calendar-icon.png'));
+	background-size: cover;
+	// margin: 0 auto;
+
+
+}
+
+#login_signup_container{
+	margin: 0 auto;
+	width: 30%;
+	position: relative;
+	top: 30%;
+	z-index: 100;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 70px;
+
+}
+
+

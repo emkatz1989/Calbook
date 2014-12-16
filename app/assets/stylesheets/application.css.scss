@@ -21,9 +21,12 @@
 
 @import 'bootstrap';
 
+
+
 body{
 	// background-image: url('http://www.pulsarwallpapers.com/data/media/3/Alien%20Ink%202560X1600%20Abstract%20Background.jpg');
 	background-image: url('http://fc02.deviantart.net/fs71/i/2011/212/5/f/simple_background_by_g123u-d429kq7.jpg');
+	
 	background-size: cover;
 }
 
@@ -49,13 +52,13 @@ body{
 
 }
 
-#shadow-slider{
+// #shadow-slider{
 
-	background-image: url("/assets/shadow-slider.png");
+// 	background-image: url("/assets/shadow-slider.png");
 
-	height:50px;
+// 	height:50px;
 
-}
+// }
 
 
 td.fc-widget-header{
@@ -91,52 +94,4 @@ tr{
 }
 
 
- #signup_form{
-
-	text-align: center;
-	margin-left: 25%;
-	margin-right: auto;
-	position: relative;
-	border-radius: 90px;
-	transition: all .3s ease-in-out;
-	width: 150px;
-
-}
-
-
-#login_form{
-
-	text-align: center;
-	margin-left: 25%;
-	margin-right: auto;
-	position: relative;
-	border-radius: 90px;
-	transition: all .3s ease-in-out;
-	width: 150px;
-
-
-}
-
-#login_page_body{
-	// background-image: url("http://www.learnhebrewpod.com/images/library/holidays/yom-kippur/book-of-life.jpg");//
-	
-	background-image: url("http://www.fubiz.net/wp-content/uploads/2013/12/Perpetual-Calendar1.jpg");
-	background-size: cover;
-	margin: 0 auto;
-
-
-}
-
-#login_signup_container{
-	margin: 0 auto;
-	width: 30%;
-	position: relative;
-	top: 30%;
-	z-index: 100;
-	border: 2px solid black;
-	border-radius: 10px;
-	margin-bottom: 70px;
-
-}
-
-
+ 
