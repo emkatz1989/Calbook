@@ -53,7 +53,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'httparty', '~> 0.13.3'
 
 #Audio/Video Transcoder for Paperclip using FFMPEG/Avconv
-# gem 'paperclip-av-transcoder'
+gem 'paperclip-av-transcoder', :require => 'paperclip'
 
 #Use paperclip for image and video uploads
 gem "paperclip", "~> 4.2"

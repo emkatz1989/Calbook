@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210004207) do
+ActiveRecord::Schema.define(version: 20141216024642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,10 @@ ActiveRecord::Schema.define(version: 20141210004207) do
     t.string   "caption"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "media_file_name"
+    t.string   "media_content_type"
+    t.integer  "media_file_size"
+    t.datetime "media_updated_at"
   end
 
   add_index "image_videos", ["day_id"], name: "index_image_videos_on_day_id", using: :btree
