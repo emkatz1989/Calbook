@@ -2,14 +2,20 @@
 	
 	def index
 		@days = Day.all
-		# event = Event.new
-		# events= Event.all
-		# blurb= Blurb.new
-		# blurbs= Blurb.all
-		# image_video= ImageVideo.new
-		# image_videos= ImageVideo.all
+		event = Event.new
+		events= Event.all
+		blurb= Blurb.new
+		blurbs= Blurb.all
+		image_video= ImageVideo.new
+		image_videos= ImageVideo.all
 		@day=Day.new
-		
+		@day.blurbs.build
+		@day.blurbs.build
+		@day.events.build
+		@day.events.build
+		@day.image_videos.build
+		@day.image_videos.build
+
 	end
 
 	def new
@@ -18,6 +24,7 @@
 	end
 	
 	def create
+		# raise(params.inspect)
 		@user_id = current_user.id
 		@day = Day.new(day_params)
 		if @day.save
@@ -49,7 +56,12 @@
 	private
 
 	def day_params
-		params.require(:day).permit(:user_id, :date)
+		params.require(:day).permit(:id, :user_id, :date, :events_attributes => [:id, :title, :text, :start_time, :end_time])
 	end
 
 end
+
+# "day"=>{"user_id"=>"13", "day_id"=>""}, 
+# "events"=>{"title"=>"a", "text"=>"a", "start_time"=>"a", "end_time"=>"a"}, 
+# "blurbs"=>{"text"=>"a"}, 
+# "image_videos"=>{"caption"=>"a"}

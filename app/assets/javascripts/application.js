@@ -55,7 +55,7 @@ $(document).on('ready page:load', function () {
        // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
 
      // alert('Current view: ' + view.name);
-     console.log(this),
+     console.log(this);
 
  //        // change the day's background color just for fun
  //        $(this).css('background-color', 'red');

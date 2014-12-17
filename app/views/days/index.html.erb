@@ -30,7 +30,7 @@
          
           <%= d.hidden_field :user_id, value: current_user.id %>
          
-          <%= fields_for :events do |events_form| %>
+          <%= d.fields_for :events do |events_form| %>
 
            <%= d.hidden_field :day_id, value: @day.id %>
             <%= events_form.text_field :title, placeholder: 'title' %>
@@ -41,15 +41,15 @@
         </div>
         blurbs:
         <div>
-          <%= fields_for :blurbs do |blurbs_form| %>
+          <%= d.fields_for :blurbs do |blurbs_form| %>
 
            <%= d.hidden_field :day_id, value: @day.id %>
-              <%= blurbs_form.text_field :text, placeholder: 'text'  %>
+          <%= blurbs_form.text_field :text, placeholder: 'text'  %>
           <% end %>
         </div>
         image_videos:
         <div>
-          <%= fields_for :image_videos do |image_form| %>
+          <%= d.fields_for :image_videos do |image_form| %>
 
            <%= d.hidden_field :day_id, value: @day.id %>
               <%= image_form.file_field :media, placeholder: 'media'  %>

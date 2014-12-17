@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
 	def create
 		#u = User.where(params[:user][:email]).first
-		u = User.find_by_email(params[:email])
+		u = User.find_by_email(params[:user][:email])
 		if u && u.authenticate(params[:user][:password])
 			session[:user_id] = u.id.to_s
 			  redirect_to days_path
