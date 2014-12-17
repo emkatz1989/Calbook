@@ -15,17 +15,24 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="modalTitle">MODAL TITLE</h4>
+      <%# @days.each do |day|%>
+
+        <h4 class="modal-title" id="modalTitle"><%= @day.date %></h4>
       </div>
       <div class="modal-body" id="modalBody">
         ...
+    <input type= "text" value="date" id="dateId" >
 
-    <% @days.each do |day|%>
-
-      <%= form_for day do |d| %>
+    <%#= binding.pry %>
+      <%= form_for @day, url: {action:"create"} do |d| %>
         events:
         <div>
+         
+          <%= d.hidden_field :user_id, value: current_user.id %>
+         
           <%= fields_for :events do |events_form| %>
+
+           <%= d.hidden_field :day_id, value: @day.id %>
             <%= events_form.text_field :title, placeholder: 'title' %>
             <%= events_form.text_field :text, placeholder: 'text' %>
             <%= events_form.datetime_field :start_time, placeholder: 'start_time' %>
@@ -35,19 +42,25 @@
         blurbs:
         <div>
           <%= fields_for :blurbs do |blurbs_form| %>
+
+           <%= d.hidden_field :day_id, value: @day.id %>
               <%= blurbs_form.text_field :text, placeholder: 'text'  %>
           <% end %>
         </div>
         image_videos:
         <div>
           <%= fields_for :image_videos do |image_form| %>
+
+           <%= d.hidden_field :day_id, value: @day.id %>
               <%= image_form.file_field :media, placeholder: 'media'  %>
               <%= image_form.text_field :caption, placeholder: 'caption'  %>
           <% end %>
         </div>
+
+         
       <%= d.submit %>
       <%end%>
-    <%end%>
+    <%#end%>
 
         </div>
 
@@ -59,6 +72,14 @@
     </div>
   </div>
 </div>
+
+
+<script>
+
+
+
+
+</script>
  
 
 

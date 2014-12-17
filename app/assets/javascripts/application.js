@@ -34,6 +34,7 @@ $(document).on('ready page:load', function () {
   selectable: true,
 
 
+
   // $('.fc-day').hover(function(){
   // 	$(this).find('.fc-day-content').css('border-color', 'red');
   // },
@@ -49,11 +50,12 @@ $(document).on('ready page:load', function () {
 
   dayClick: function(date, jsEvent, view) {
 
- //        // alert('Clicked on: ' + date.format());
+         // alert('Clicked on: ' + date.format();
 
- //        // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+       // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
 
- //        // alert('Current view: ' + view.name);
+     // alert('Current view: ' + view.name);
+     console.log(this),
 
  //        // change the day's background color just for fun
  //        $(this).css('background-color', 'red');
@@ -62,13 +64,30 @@ $(document).on('ready page:load', function () {
  //        // $('#modalTitle').html(event.title);
  //        // $('#modalBody').html(event.description);
  //        // $('#eventUrl').attr('href',event.url);
-        $('#dayShowModal').modal();
- //        console.log(this);
+        
 
-        $('#save-day').on('click', function(day){
-          console.log ('triggered');
-          day_id.save 
-        });
+        // $('#dayModalShow').find('#modalTitle').append
+
+
+        
+
+        $('#dayShowModal').modal();
+
+        // $("[data-date='this.data-date']")
+        
+
+        var date = $(this).attr("data-date");
+        $('#dateId').val(date);
+
+
+
+
+        
+       
+        // $('#save-day').on('click', function(day){
+        //   console.log ('triggered');
+        //   day_id.save 
+        // });
 
 
 //====END OF DANGER ZONE====//
