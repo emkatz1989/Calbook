@@ -68,17 +68,13 @@ $(document).on('ready page:load', function () {
 
         // $('#dayModalShow').find('#modalTitle').append
 
-
-        
-
-        $('#dayShowModal').modal();
-
         // $("[data-date='this.data-date']")
         
 
         var date = $(this).attr("data-date");
         $('#dateId').val(date);
 
+//        $('#dayShowModal').html(???).modal();
 
 
 

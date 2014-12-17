@@ -24,43 +24,46 @@
     <input type= "text" value="date" id="dateId" >
 
     <%#= binding.pry %>
-      <%= form_for @day, url: {action:"create"} do |d| %>
-        events:
-        <div>
-         
-          <%= d.hidden_field :user_id, value: current_user.id %>
-         
-          <%= d.fields_for :events do |events_form| %>
+    <div style="display:none">
+      <% @days.each do |d| %>
+        <%= form_for d, {url: {action:"create"}, html:{name:d.date.to_s}} do |f| %>
+          events:
+          <div>
+           
+            <%= f.hidden_field :user_id, value: current_user.id %>
+           
+            <%= f.fields_for :events do |events_form| %>
 
-           <%= d.hidden_field :day_id, value: @day.id %>
-            <%= events_form.text_field :title, placeholder: 'title' %>
-            <%= events_form.text_field :text, placeholder: 'text' %>
-            <%= events_form.datetime_field :start_time, placeholder: 'start_time' %>
-            <%= events_form.datetime_field :end_time, placeholder: 'end_time' %>  
-          <% end %>
-        </div>
-        blurbs:
-        <div>
-          <%= d.fields_for :blurbs do |blurbs_form| %>
+             <%= f.hidden_field :day_id, value: @day.id %>
+              <%= events_form.text_field :title, placeholder: 'title' %>
+              <%= events_form.text_field :text, placeholder: 'text' %>
+              <%= events_form.datetime_field :start_time, placeholder: 'start_time' %>
+              <%= events_form.datetime_field :end_time, placeholder: 'end_time' %>  
+            <% end %>
+          </div>
+          blurbs:
+          <div>
+            <%= f.fields_for :blurbs do |blurbs_form| %>
 
-           <%= d.hidden_field :day_id, value: @day.id %>
-          <%= blurbs_form.text_field :text, placeholder: 'text'  %>
-          <% end %>
-        </div>
-        image_videos:
-        <div>
-          <%= d.fields_for :image_videos do |image_form| %>
+             <%= f.hidden_field :day_id, value: @day.id %>
+            <%= blurbs_form.text_field :text, placeholder: 'text'  %>
+            <% end %>
+          </div>
+          image_videos:
+          <div>
+            <%= f.fields_for :image_videos do |image_form| %>
 
-           <%= d.hidden_field :day_id, value: @day.id %>
-              <%= image_form.file_field :media, placeholder: 'media'  %>
-              <%= image_form.text_field :caption, placeholder: 'caption'  %>
-          <% end %>
-        </div>
+             <%= f.hidden_field :day_id, value: @day.id %>
+                <%= image_form.file_field :media, placeholder: 'media'  %>
+                <%= image_form.text_field :caption, placeholder: 'caption'  %>
+            <% end %>
+          </div>
 
-         
-      <%= d.submit %>
+           
+          <%= f.submit %>
+        <%end%>
       <%end%>
-    <%#end%>
+    </div>
 
         </div>
 

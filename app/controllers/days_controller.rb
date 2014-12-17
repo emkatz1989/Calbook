@@ -1,13 +1,10 @@
 	class DaysController < ApplicationController
 	
 	def index
-		@days = Day.all
-		event = Event.new
-		events= Event.all
-		blurb= Blurb.new
-		blurbs= Blurb.all
-		image_video= ImageVideo.new
-		image_videos= ImageVideo.all
+		@days = current_user.days
+
+		# This allows us to build a new day thinger
+		# But ... we DGAF
 		@day=Day.new
 		@day.blurbs.build
 		@day.blurbs.build
