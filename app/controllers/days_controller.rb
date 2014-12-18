@@ -8,7 +8,7 @@
 			next if all_days.include? day
 
 			# This allows us to build a new day thinger
-			# And we finally ... GAF
+			# And we finally ... GAF	
 			new_day=Day.new(date: day)
 			new_day.blurbs.build
 			new_day.blurbs.build
@@ -28,10 +28,11 @@
 	end
 	
 	def create
-		# raise(params.inspect)
+	
 		@user_id = current_user.id
 		@day = Day.new(day_params)
 		if @day.save
+				raise(params.inspect)
 			redirect_to days_path(@days)
 		else
 			redirect_to :back
@@ -43,6 +44,7 @@
 	end
 
 	def update
+	   raise("kissmykeester!")
 	   @day = Day.find(params[:id])
 	    if @day.update(day_params)
 	      redirect_to :back

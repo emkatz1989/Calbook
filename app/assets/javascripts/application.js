@@ -85,6 +85,8 @@ $(document).on('ready page:load', function () {
 
        $('#dayShowModal'+ date).modal();
 
+       
+
 
 
 

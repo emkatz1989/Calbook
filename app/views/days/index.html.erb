@@ -1,4 +1,12 @@
 
+<div id="user_header">
+    <% if current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log Out", new_session_path("current") %>
+  <% else %>
+      <%= link_to "Sign_up", new_session_path %>
+    <% end %>
+  </div>
 <div id="calendar-container">
   <div id="calendar"></div>
 </div>
@@ -11,7 +19,7 @@
 
 <!-- Modal -->
 
-        ...
+      <!--   ... -->
     
 
     <%#= binding.pry %>
@@ -29,11 +37,11 @@
       </div>
       <div class="modal-body" id="modalBody">
 
-        <%= form_for d, {url: {action:"create"}, html:{name:d.date.to_s}} do |f| %>
+        <%= form_for d, {html:{name:d.date.to_s}} do |f| %>
       <%#=f.text_field :date, value: d.date %>
       <div class = "events_form">
       My Events:
-        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>  <%= f.hidden_field :date, value: d.date %>
       
         <%= f.fields_for :events do |events_form| %>
 
@@ -91,6 +99,12 @@
 
 </script>
  
+
+
+
+
+
+
 
 
 
