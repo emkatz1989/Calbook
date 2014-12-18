@@ -56,6 +56,8 @@
 
 }
 
+
+
 #login_signup_container{
 	margin: 0 auto;
 	width: 30%;
@@ -66,6 +68,57 @@
 	border-radius: 10px;
 	margin-bottom: 70px;
 
+}
+
+
+
+#signup_button{
+	margin-top: 70px;
+	height: 80px;
+	background-image: url(image-path('piknik_signup.png'));
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 200px;
+	transition: all .3s ease-in-out;
+	z-index: -100;
+	cursor: pointer;
+	font-size: 80px;
+	text-align: center;
+}
+
+#signup_button:hover{
+	transform: scale(1.2,1.2);
+	transition: all .3s ease-in-out;
+}
+#signup_button:active{
+	transform: scale(1,1);
+	transition: all .1s ease-in-out;
+}
+
+#login_button{
+
+	height: 80px;
+
+	margin-top: 20px;
+
+	background-image: url(image-path('piknik_login.png'));
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 160px;
+	transition: all .3s ease-in-out;
+	z-index: -100;
+	cursor: pointer;
+	font-size: 80px;
+	text-align: center;
+}
+
+#login_button:hover{
+	transform: scale(1.2,1.2);
+	transition: all .3s ease-in-out;
+}
+#login_button:active{
+	transform: scale(1,1);
+	transition: all .1s ease-in-out;
 }
 
 

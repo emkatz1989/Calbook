@@ -2,17 +2,24 @@
 	
 	def index
 		@days = current_user.days
+		all_days = @days.map(&:date)
+		day = Date.today.beginning_of_month
+		while day <= Date.today.end_of_month
+			next if all_days.include? day
 
-		# This allows us to build a new day thinger
-		# But ... we DGAF
-		@day=Day.new
-		@day.blurbs.build
-		@day.blurbs.build
-		@day.events.build
-		@day.events.build
-		@day.image_videos.build
-		@day.image_videos.build
+			# This allows us to build a new day thinger
+			# And we finally ... GAF
+			new_day=Day.new(date: day)
+			new_day.blurbs.build
+			new_day.blurbs.build
+			new_day.events.build
+			new_day.events.build
+			new_day.image_videos.build
+			new_day.image_videos.build
+			@days << new_day
 
+			day = day.next
+		end
 	end
 
 	def new

@@ -10,31 +10,34 @@
 </button> -->
 
 <!-- Modal -->
-<div class="modal fade" id="dayShowModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+        ...
+    
+
+    <%#= binding.pry %>
+<!--     <div style="display:none"> -->
+      <% @days.each do |d| %>
+      
+        <div class="modal fade" id="dayShowModal<%= d.date %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <%# @days.each do |day|%>
 
-        <h4 class="modal-title" id="modalTitle"><%= @day.date %></h4>
+        <h4 class="modal-title" id="modalTitle"><%= d.date %></h4>
       </div>
       <div class="modal-body" id="modalBody">
-        ...
-    <input type= "text" value="date" id="dateId" >
 
-    <%#= binding.pry %>
-<!--     <div style="display:none"> -->
-      <% @days.each do |d| %>
         <%= form_for d, {url: {action:"create"}, html:{name:d.date.to_s}} do |f| %>
-          
+      <%#=f.text_field :date, value: d.date %>
       <div class = "events_form">
       My Events:
         <%= f.hidden_field :user_id, value: current_user.id %>
-           
+      
         <%= f.fields_for :events do |events_form| %>
 
-        <%= f.hidden_field :day_id, value: @day.id %>
+      
           <div id= "event_title"><%= events_form.text_field :title, placeholder: 'title' %></div>
           <div id= "event_description"> <%= events_form.text_field :text, placeholder: 'text' %></div>
           <div id="event_start"><%= events_form.datetime_field :start_time, placeholder: 'start_time'%></div>
@@ -47,7 +50,7 @@
         What did you do today?:
           
         <%= f.fields_for :blurbs do |blurbs_form| %>
-          <%= f.hidden_field :day_id, value: @day.id %>
+       
           <div id= "blurb"><%= blurbs_form.text_field :text, placeholder: 'text'  %></div>
           <% end %>
       </div>
@@ -57,7 +60,7 @@
         
         <%= f.fields_for :image_videos do |image_form| %>
 
-          <%= f.hidden_field :day_id, value: @day.id %>
+         
           <div id="media"><%= image_form.file_field :media, placeholder: 'media'  %></div>
           <div id="caption"><%= image_form.text_field :caption, placeholder: 'caption'  %></div>
         <% end %>
@@ -66,12 +69,7 @@
            
           <%= f.submit %>
         <%end%>
-      <%end%>
-    <!-- </div> -->
-
-      </div>
-
-      </div>
+         </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" id= "save-day">Save changes</button>
@@ -79,6 +77,11 @@
     </div>
   </div>
 </div>
+      <%end%>
+   
+
+
+     
 
 
 <script>

@@ -78,11 +78,13 @@ $(document).on('ready page:load', function () {
         
 
         var date = $(this).attr("data-date");
-        $('#dateId').val(date);
+        // Dig up the proper modal
+//        $('#dateId').val(date);
 
-       // $('#dayShowModal').html(???).modal();
+      
 
-       $('#dayShowModal').modal();
+       $('#dayShowModal'+ date).modal();
+
 
 
 
