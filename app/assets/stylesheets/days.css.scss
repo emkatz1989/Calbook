@@ -1,18 +1,29 @@
 
+#modalTitle{
+
+	text-align: center;
+}
+
+
 #modalBody{
 
 background-color: red;
+padding-bottom: 10px;
 }
 
 .events_form{
 text-align: center;
 padding: 20px;
+border: 1px solid black;
+font-size: 20px;
 
 }
 
 .blurbs_form{
 text-align: center;
 padding: 20px;
+border: 1px solid black;
+font-size: 20px;
 
 }
 
@@ -20,7 +31,19 @@ padding: 20px;
 .image_videos_form{
 text-align: center;
 padding: 20px;
+border: 1px solid black;
+font-size: 20px;
 
+}
+
+ .blurb{
+
+  height:100px;
+  // left:0;
+  // line-height:33px;
+  // padding:8px 8px 7px;
+  // top:0;
+  width:300px;
 }
 
 // td.fc-day{

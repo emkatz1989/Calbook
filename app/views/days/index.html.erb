@@ -40,31 +40,32 @@
         <%= form_for d, {html:{name:d.date.to_s}} do |f| %>
       <%#=f.text_field :date, value: d.date %>
       <div class = "events_form">
-      My Events:
+      My Events
         <%= f.hidden_field :user_id, value: current_user.id %>  <%= f.hidden_field :date, value: d.date %>
       
         <%= f.fields_for :events do |events_form| %>
 
       
           <div id= "event_title"><%= events_form.text_field :title, placeholder: 'title' %></div>
-          <div id= "event_description"> <%= events_form.text_field :text, placeholder: 'text' %></div>
-          <div id="event_start"><%= events_form.datetime_field :start_time, placeholder: 'start_time'%></div>
-          <div id= "event_end"><%= events_form.datetime_field :end_time, placeholder: 'end_time' %></div>
+          <div id= "event_description"> <%= events_form.text_field :text, placeholder: 'description' %></div>
+          <div id="event_start"><%= events_form.datetime_field :start_time, placeholder: 'start time'%></div>
+          <div id= "event_end"><%= events_form.datetime_field :end_time, placeholder: 'end time' %></div>
         <% end %>
       </div>
           
       <div class= "blurbs_form">
           <!-- blurbs: -->
-        What did you do today?:
+        What did you do today?
           
         <%= f.fields_for :blurbs do |blurbs_form| %>
        
-          <div id= "blurb"><%= blurbs_form.text_field :text, placeholder: 'text'  %></div>
+          <div id= "blurb"><%= blurbs_form.text_field :text, placeholder: 'text', :rows => "15", :cols => "80" %></div>
           <% end %>
       </div>
+
           
       <div class= "image_videos_form">
-        image_videos:
+        Add images
         
         <%= f.fields_for :image_videos do |image_form| %>
 
@@ -99,6 +100,7 @@
 
 </script>
  
+
 
 
 

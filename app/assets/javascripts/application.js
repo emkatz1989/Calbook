@@ -28,7 +28,7 @@ $(document).on('ready page:load', function () {
         right:  ''
   	},
 
-  googleCalendarApiKey: 'GOOGLE_KEY',
+  googleCalendarApiKey: 'GOOGLE_API_KEY',
         events: {
           googleCalendarId: 'emkatz1989@gmail.com',
             className: 'gcal-event' // an option!
@@ -84,8 +84,9 @@ $(document).on('ready page:load', function () {
       
 
        $('#dayShowModal'+ date).modal();
+       // $('#mylightbox').ekkoLightbox(options);
 
-       
+
 
 
 

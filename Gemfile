@@ -57,9 +57,9 @@ gem 'httparty', '~> 0.13.3'
 # gem 'paperclip-av-transcoder', :require => 'paperclip'
 
 #Use paperclip for image and video uploads
-# gem "paperclip", "~> 4.2"
+gem "paperclip", "~> 4.2"
 
-gem 'paperclip-ffmpeg', :require => 'paperclip'
+# gem 'paperclip-ffmpeg', :require => 'paperclip'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
