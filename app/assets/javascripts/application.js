@@ -20,6 +20,17 @@
 //= require_tree .
 
 $(document).on('ready page:load', function () {
+  $('#signup_button').click(function(){
+
+  $('#signUpModal').modal();
+  }),
+
+
+$('#login_button').click(function(){
+  $('#loginModal').modal();
+
+}),
+
   $('#calendar').fullCalendar({
   // ======put your options and callbacks here=====//
   header: {

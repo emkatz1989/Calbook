@@ -1,0 +1,12 @@
+_f.signup.erb
+
+<div id="signup_form"> <h1> SIGNUP </h1>
+  <%= form_for(@user) do |f| %>
+  <%= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
+  <%= f.text_field :email, :placeholder => "create email", :class => "input_field" %>
+  <%= f.password_field :password, :placeholder => "create password", :class => "input_field" %>
+  <%= f.password_field :password_confirmation, :placeholder => "confirm password", :class => "input_field"%>
+  <%= f.submit "submit", :class => "submit_button", :id => "submit_signup_button" %>
+  <% end %>
+  <!-- <span class = "close_signup_button">cancel</span> -->
+</div>

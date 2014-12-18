@@ -17,22 +17,81 @@
 </div>
 
   <div id="signup_button"> Sign Up</div>
-  <div id="login_button">Login In</div>
+  <div id="login_button">Login</div>
 
 
-<div id="login_signup_container">
+
+<!-- Isolation Zone -->
+
+<!-- <div id="login_signup_container">
 
 
 <div id="login_form"><h1> LOGIN </h1>
-  <%= form_for(@user,{url:sessions_path}) do |f| %> 
+  <%#= form_for(@user,{url:sessions_path}) do |f| %> 
+   <%#= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
+   <%#= f.password_field :password, :placeholder => "password", :class => "input_field" %>
+   <%#= f.submit "submit", :class => "submit_button", :id => "submit_login_button"%>
+  <%# end %>
+  <!-- <span class = "close_login_button">cancel</span> -->
+<!-- </div>
+
+<div id="signup_form"> <h1> SIGNUP </h1> -->
+  <%#= form_for(@user) do |f| %>
+  <%#= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
+  <%#= f.text_field :email, :placeholder => "create email", :class => "input_field" %>
+  <%#= f.password_field :password, :placeholder => "create password", :class => "input_field" %>
+  <%#= f.password_field :password_confirmation, :placeholder => "confirm password", :class => "input_field"%>
+  <%#= f.submit "submit", :class => "submit_button", :id => "submit_signup_button" %>
+  <%# end %>
+  <!-- <span class = "close_signup_button">cancel</span> -->
+<!-- </div>
+</div> --> 
+
+<!-- END Isolation Zone-->
+
+<!-- 
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> --> 
+
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div id="login_form"><h1> LOGIN </h1>
+   <%= form_for(@user,{url:sessions_path}) do |f| %> 
    <%= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
    <%= f.password_field :password, :placeholder => "password", :class => "input_field" %>
    <%= f.submit "submit", :class => "submit_button", :id => "submit_login_button"%>
   <% end %>
   <!-- <span class = "close_login_button">cancel</span> -->
 </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <!--     <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
-<div id="signup_form"> <h1> SIGNUP </h1>
+
+
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+     <div id="signup_form"> <h1> SIGNUP </h1>
   <%= form_for(@user) do |f| %>
   <%= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
   <%= f.text_field :email, :placeholder => "create email", :class => "input_field" %>
@@ -42,7 +101,26 @@
   <% end %>
   <!-- <span class = "close_signup_button">cancel</span> -->
 </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <!--     <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>

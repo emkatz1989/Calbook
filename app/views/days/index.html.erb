@@ -46,8 +46,8 @@
         <%= f.fields_for :events do |events_form| %>
 
       
-          <div id= "event_title"><%= events_form.text_field :title, placeholder: 'title' %></div>
-          <div id= "event_description"> <%= events_form.text_field :text, placeholder: 'description' %></div>
+         <div id= "event_title"><%= events_form.text_field :title, placeholder: 'title' %></div>
+         <div id= "event_description"> <%= events_form.text_field :text, placeholder: 'description' %></div>
           <div id="event_start"><%= events_form.datetime_field :start_time, placeholder: 'start time'%></div>
           <div id= "event_end"><%= events_form.datetime_field :end_time, placeholder: 'end time' %></div>
         <% end %>

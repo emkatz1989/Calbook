@@ -17,8 +17,13 @@
 			new_day.image_videos.build
 			new_day.image_videos.build
 			@days << new_day
-
+			puts ENV['GOOGLE_API_KEY']
 			day = day.next
+
+			# google ApplicationControlleradfsadf
+
+			# sdfa
+			# @events
 		end
 	end
 
