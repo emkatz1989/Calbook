@@ -3,10 +3,18 @@ class ImageVideo < ActiveRecord::Base
   # attr_accessible :media, :caption
   has_many :tag_types, as: :taggable
 
-    has_attached_file :media, :styles => {
-    :medium => { :geometry => "640x480", :format => 'flv' },
-    :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 10 }
+  
+  has_attached_file :media, :styles => {
+    :medium => { :geometry => "640x480", :format => 'flv', :convert_options => {:output => {:ar => 44100}} },
+    :large => { :geometry => "1024x576", :format => 'flv', :convert_options => {:output => {:ar => 44100}} },
   }, :processors => [:ffmpeg]
+
+
+
+  #   has_attached_file :media, :styles => {
+  #   :medium => { :geometry => "640x480", :format => 'flv' },
+  #   :thumb => { :geometry => "100x100#", :format => 'jpg', :time => 10 }
+  # }, :processors => [:ffmpeg]
 
 
   # <attachment>_meta

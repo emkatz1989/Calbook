@@ -59,7 +59,7 @@ gem 'httparty', '~> 0.13.3'
 #Use paperclip for image and video uploads
 # gem "paperclip", "~> 4.2"
 
-gem 'paperclip-ffmpeg'
+gem 'paperclip-ffmpeg', :require => 'paperclip'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 

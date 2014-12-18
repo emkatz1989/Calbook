@@ -53,7 +53,7 @@
 	private
 
 	def day_params
-		params.require(:day).permit(:id, :user_id, :date, :events_attributes => [:id, :title, :text, :start_time, :end_time])
+		params.require(:day).permit(:id, :user_id, :date, :events_attributes => [:id, :title, :text, :start_time, :end_time], :blurbs_attributes => [:id, :text], :image_videos_attributes => [:id, :caption, :media_file_name, :media_content_type, :media_file_size])
 	end
 
 end

@@ -28,6 +28,12 @@ $(document).on('ready page:load', function () {
         right:  ''
   	},
 
+  googleCalendarApiKey: 'GOOGLE_KEY',
+        events: {
+          googleCalendarId: 'emkatz1989@gmail.com',
+            className: 'gcal-event' // an option!
+        },
+
   defaultView: 'month',
   handleWindowResize: true,
   editable: true,
@@ -74,7 +80,9 @@ $(document).on('ready page:load', function () {
         var date = $(this).attr("data-date");
         $('#dateId').val(date);
 
-//        $('#dayShowModal').html(???).modal();
+       // $('#dayShowModal').html(???).modal();
+
+       $('#dayShowModal').modal();
 
 
 
