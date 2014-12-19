@@ -6,10 +6,13 @@
   <% else %>
       <%= link_to "Sign_up", new_session_path %>
     <% end %>
+  
   </div>
+
 <div id="calendar-container">
   <div id="calendar"></div>
 </div>
+<!-- <h3>Click A Day to Add an Entry!</h3> -->
 
 
 <!-- Button trigger modal -->
@@ -76,7 +79,7 @@
       </div>
 
            
-          <%= f.submit %>
+          <div class="submit-button"><%= f.submit %></div>
         <%end%>
          </div>
       <div class="modal-footer">

@@ -37,9 +37,9 @@ class ImageVideo < ActiveRecord::Base
   # auto_rotate: 'landscape'
 
 # validates :media, :attachment_presence => true
-validates_with AttachmentPresenceValidator, :attributes => :media
+# validates_with AttachmentPresenceValidator, :attributes => :media
 # validates_with AttachmentSizeValidator, :attributes => :media, :less_than => 5.megabytes
-validates_attachment_content_type :media, :content_type => /\Aimage\/.*\Z/
+# validates_attachment_content_type :media, :content_type => /\Aimage\/.*\Z/
 
 
 end
