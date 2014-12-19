@@ -25,7 +25,6 @@ $(document).on('ready page:load', function () {
   $('#signUpModal').addClass('animated bounceOutLeft').modal();
   }),
 
-
 $('#login_button').click(function(){
   $('#loginModal').addClass('animated bounceOutLeft').modal();
 }),
@@ -48,7 +47,16 @@ $('#login_button').click(function(){
   handleWindowResize: true,
   editable: true,
   selectable: true,
+ /////
+// function PreviewImage() {
+//         var oFReader = new FileReader();
+//         oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
 
+//         oFReader.onload = function (oFREvent) {
+//             document.getElementById("uploadPreview").src = oFREvent.target.result;
+//         };
+//     };
+/////
 
 
   // $('.fc-day').hover(function(){
@@ -95,6 +103,7 @@ $('#login_button').click(function(){
 
        $('#dayShowModal'+ date).modal();
        // $('#mylightbox').ekkoLightbox(options);
+
 
 
 
