@@ -7,7 +7,8 @@ class Day < ActiveRecord::Base
   has_many :events
   has_many :image_videos
 
-  accepts_nested_attributes_for :blurbs, :events, :image_videos  reject_if: proc { |attributes| attributes['title'].blank? }
+  accepts_nested_attributes_for :blurbs, :events, :image_videos  
+  # reject_if: proc { |attributes| attributes['title'].blank? }
 	def checkstuff
 		puts "%%%%%%%%%%%%%%%%%%% checkstuff"
 		(self.image_videos.length - 1).downto 0 do |i|
