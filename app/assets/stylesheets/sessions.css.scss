@@ -34,6 +34,7 @@
 	border-radius: 90px;
 	transition: all .3s ease-in-out;
 	width: 150px;
+	
 
 }
 
@@ -47,6 +48,7 @@
 	border-radius: 90px;
 	transition: all .3s ease-in-out;
 	width: 150px;
+
 
 
 }
@@ -83,7 +85,6 @@
 #signup_button{
 	margin-top: 70px;
 	height: 80px;
-	background-image: url(image-path('piknik_signup.png'));
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: 200px;
@@ -92,6 +93,9 @@
 	cursor: pointer;
 	font-size: 80px;
 	text-align: center;
+	font-style: italic;
+	// border-style: 2px solid;
+	// border-width: 2px;
 }
 
 #signup_button:hover{
@@ -118,6 +122,13 @@
 	cursor: pointer;
 	font-size: 80px;
 	text-align: center;
+	font-style: italic;
+	// border-style: solid;
+	// border-left: 1px;
+	// border-right:1px;
+	// border-bottom:2px;
+	// border-top:1px;
+	// border-width: 2px;
 }
 
 #login_button:hover{

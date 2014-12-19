@@ -11,10 +11,10 @@
 				# And we finally ... GAF	
 				new_day=Day.new(date: day)
 				new_day.blurbs.build
-				new_day.blurbs.build
+				# new_day.blurbs.build
 				new_day.events.build
-				new_day.events.build
-				new_day.image_videos.build
+				# new_day.events.build
+				# new_day.image_videos.build
 				new_day.image_videos.build
 				@days << new_day
 				puts ENV['GOOGLE_API_KEY']
@@ -59,6 +59,7 @@
 	      redirect_to :back
 	    else
 	      render 'edit'
+	      
 	    end
   	end
 

@@ -39,7 +39,7 @@
 
         <%= form_for d do |f| %>
       <%#=f.text_field :date, value: d.date %>
-      <div class = "events_form">
+      <div id = "events_form">
       My Events
         <%= f.hidden_field :user_id, value: current_user.id %>  <%= f.hidden_field :date, value: d.date %>
       
@@ -53,7 +53,7 @@
         <% end %>
       </div>
           
-      <div class= "blurbs_form">
+      <div id= "blurbs_form">
 
           <!-- blurbs: -->
         What did you do today?
@@ -64,7 +64,7 @@
       </div>
 
           
-      <div class= "image_videos_form">
+      <div id= "image_videos_form">
 
         Add images
         <%= f.fields_for :image_videos do |image_form| %>
@@ -80,7 +80,7 @@
          </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id= "save-day">Save changes</button>
+        <!-- <button type="button" class="btn btn-primary" id= "save-day">Save changes</button> -->
       </div>
     </div>
   </div>

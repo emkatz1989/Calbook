@@ -22,13 +22,12 @@
 $(document).on('ready page:load', function () {
   $('#signup_button').click(function(){
 
-  $('#signUpModal').modal();
+  $('#signUpModal').addClass('animated bounceOutLeft').modal();
   }),
 
 
 $('#login_button').click(function(){
-  $('#loginModal').modal();
-
+  $('#loginModal').addClass('animated bounceOutLeft').modal();
 }),
 
   $('#calendar').fullCalendar({

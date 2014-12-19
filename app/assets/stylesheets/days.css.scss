@@ -5,34 +5,37 @@
 }
 
 
-#modalBody{
+.modal-body{
 
 background-color: red;
 padding-bottom: 10px;
 }
 
-.events_form{
+#events_form{
 text-align: center;
-padding: 20px;
+padding: 40px;
 border: 1px solid black;
 font-size: 20px;
+background-color: white;
 
 }
 
-.blurbs_form{
+#blurbs_form{
 text-align: center;
-padding: 20px;
+padding: 40px;
 border: 1px solid black;
 font-size: 20px;
+background-color: white;
 
 }
 
 
-.image_videos_form{
+#image_videos_form{
 text-align: center;
-padding: 20px;
+padding: 40px;
 border: 1px solid black;
 font-size: 20px;
+background-color: white;
 
 }
 
