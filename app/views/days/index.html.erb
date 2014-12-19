@@ -70,6 +70,7 @@
         <%= f.fields_for :image_videos do |image_form| %>
           <div id="media"><%= image_form.file_field :media, placeholder: 'media'  %></div>
           <div id="caption"><%= image_form.text_field :caption, placeholder: 'caption'  %></div>
+           <%#= f.submit %>
         <% end %>
 
       </div>

@@ -25,6 +25,24 @@
 	color: black;
 }
 
+
+#modalTitle{
+
+text-align: center;
+
+}
+
+#sign-up.modal-body{
+	background-color: red;
+	// padding-bottom: 10px;
+}
+
+#login.modal-body{
+
+background-color: red;
+// padding-bottom: 10px;
+
+}
 #signup_form{
 
 	text-align: center;
@@ -61,7 +79,7 @@
 	
 	background-image: url(image-path('calendar-icon.png'));
 	background-size: cover;
-	// margin: 0 auto;
+	margin: 0 auto;
 
 
 }
@@ -82,21 +100,45 @@
 
 
 
-#signup_button{
-	margin-top: 70px;
-	height: 80px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 200px;
+
+#signup_button {
+	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+	-webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+	background-color:#c62d1f;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:50px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
 	transition: all .3s ease-in-out;
-	z-index: -100;
-	cursor: pointer;
-	font-size: 80px;
+	background-size: 200px;
 	text-align: center;
-	font-style: italic;
-	// border-style: 2px solid;
-	// border-width: 2px;
+	background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -100;
+    margin: 0 auto;
+    width: 400px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
 }
+
+
 
 #signup_button:hover{
 	transform: scale(1.2,1.2);
@@ -107,28 +149,42 @@
 	transition: all .1s ease-in-out;
 }
 
-#login_button{
 
-	height: 80px;
 
-	margin-top: 20px;
 
-	background-image: url(image-path('piknik_login.png'));
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: 160px;
+#login_button {
+	-moz-box-shadow: 3px 4px 0px 0px #8a2a21;
+	-webkit-box-shadow: 3px 4px 0px 0px #8a2a21;
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24437',GradientType=0);
+	background-color:#c62d1f;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:50px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
 	transition: all .3s ease-in-out;
-	z-index: -100;
-	cursor: pointer;
-	font-size: 80px;
+	background-size: 200px;
 	text-align: center;
-	font-style: italic;
-	// border-style: solid;
-	// border-left: 1px;
-	// border-right:1px;
-	// border-bottom:2px;
-	// border-top:1px;
-	// border-width: 2px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -100;
+    margin: 0 auto;
+    width: 400px;
+
 }
 
 #login_button:hover{
@@ -139,5 +195,97 @@
 	transform: scale(1,1);
 	transition: all .1s ease-in-out;
 }
+
+
+.submit_button{
+
+	margin-top: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #signup_button{
+// 	margin-top: 70px;
+// 	height: 80px;
+// 	background-position: center center;
+// 	background-repeat: no-repeat;
+// 	background-size: 200px;
+// 	transition: all .3s ease-in-out;
+// 	z-index: -100;
+// 	cursor: pointer;
+// 	font-size: 80px;
+// 	text-align: center;
+// 	font-style: italic;
+// 	// border-style: 2px solid;
+// 	// border-width: 2px;
+// }
+
+
+
+// #login_button{
+
+// 	height: 80px;
+
+// 	margin-top: 20px;
+
+// 	background-image: url(image-path('piknik_login.png'));
+// 	background-position: center center;
+// 	background-repeat: no-repeat;
+// 	background-size: 160px;
+// 	transition: all .3s ease-in-out;
+// 	z-index: -100;
+// 	cursor: pointer;
+// 	font-size: 80px;
+// 	text-align: center;
+// 	font-style: italic;
+// 	// border-style: solid;
+// 	// border-left: 1px;
+// 	// border-right:1px;
+// 	// border-bottom:2px;
+// 	// border-top:1px;
+// 	// border-width: 2px;
+// }
+
+// #login_button:hover{
+// 	transform: scale(1.2,1.2);
+// 	transition: all .3s ease-in-out;
+// }
+// #login_button:active{
+// 	transform: scale(1,1);
+// 	transition: all .1s ease-in-out;
+// }
 
 

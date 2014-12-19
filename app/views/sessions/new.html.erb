@@ -11,13 +11,15 @@
     
   <div id="welcome-blurb">
       <h2> A simple lifelogging utility. </h2>
+      <img src="http://paulcbrunson.com/wp-content/uploads/2014/01/SmilingSelfie.jpg">
       <h3> Keep a calendar with a built-in journal. </h3>
       <h3> Add the day's pictures and videos! </h3>
  </div>
 </div>
 
-  <div id="signup_button"> Sign Up</div>
-  <div id="login_button">Login</div>
+
+ <a href='#' id="signup_button"> Sign Up</a>
+ <a href='#' id="login_button">Login</a>
 
 
 
@@ -61,9 +63,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">LOGIN</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="login">
         <div id="login_form"><h1> LOGIN </h1>
    <%= form_for(@user,{url:sessions_path}) do |f| %> 
    <%= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
@@ -88,9 +90,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">SIGN UP</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="sign-up">
      <div id="signup_form"> <h1> SIGNUP </h1>
   <%= form_for(@user) do |f| %>
   <%= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
