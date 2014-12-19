@@ -37,7 +37,7 @@
       </div>
       <div class="modal-body" id="modalBody">
 
-        <%= form_for d, {html:{name:d.date.to_s}} do |f| %>
+        <%= form_for d do |f| %>
       <%#=f.text_field :date, value: d.date %>
       <div class = "events_form">
       My Events
@@ -54,25 +54,24 @@
       </div>
           
       <div class= "blurbs_form">
+
           <!-- blurbs: -->
         What did you do today?
-          
         <%= f.fields_for :blurbs do |blurbs_form| %>
-       
           <div id= "blurb"><%= blurbs_form.text_field :text, placeholder: 'text', :rows => "15", :cols => "80" %></div>
-          <% end %>
+        <% end %>
+
       </div>
 
           
       <div class= "image_videos_form">
-        Add images
-        
-        <%= f.fields_for :image_videos do |image_form| %>
 
-         
+        Add images
+        <%= f.fields_for :image_videos do |image_form| %>
           <div id="media"><%= image_form.file_field :media, placeholder: 'media'  %></div>
           <div id="caption"><%= image_form.text_field :caption, placeholder: 'caption'  %></div>
         <% end %>
+
       </div>
 
            
