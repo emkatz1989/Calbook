@@ -59,7 +59,7 @@
       <div id= "blurbs_form">
 
           <!-- blurbs: -->
-        What did you do today?
+        What I Did Today
         <%= f.fields_for :blurbs do |blurbs_form| %>
           <div id= "blurb"><%= blurbs_form.text_field :text, placeholder: 'text', :rows => "15", :cols => "80" %></div>
         <% end %>
