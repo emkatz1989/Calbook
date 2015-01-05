@@ -9,11 +9,11 @@ class Day < ActiveRecord::Base
 
   accepts_nested_attributes_for :blurbs, :events, :image_videos  
   # reject_if: proc { |attributes| attributes['title'].blank? }
-	def checkstuff
-		puts "%%%%%%%%%%%%%%%%%%% checkstuff"
-		(self.image_videos.length - 1).downto 0 do |i|
-			# if image_videos[i]=nil
-			puts "Doing #{i}"
-		end
-	end
+	# def checkstuff
+	# 	puts "%%%%%%%%%%%%%%%%%%% checkstuff"
+	# 	(self.image_videos.length - 1).downto 0 do |i|
+	# 		# if image_videos[i]=nil
+	# 		puts "Doing #{i}"
+	# 	end
+	# end
 end

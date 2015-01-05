@@ -23,7 +23,8 @@
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <%# @days.each do |day|%>
 
-        <h4 class="modal-title" id="modalTitle"><%= d.date.readable_inspect %></h4>
+        <h4 class="modal-title" id="modalTitle"><%= d.date.to_formatted_s(:long) %></h4>
+       <!--  .readable_inspect as alt method for showing day -->
       </div>
       <div class="modal-body" id="modalBody">
 
@@ -49,7 +50,8 @@
 
         Add images
         <%= f.fields_for :image_videos do |image_form| %>
-          <div id="media" input id="uploadImage" type="file" name="myPhoto"><%= image_form.file_field :media, placeholder: 'media'  %></div>
+          <div id="media" input id="uploadImage" type="file" name="myPhoto">
+            <%= image_form.file_field :media, placeholder: 'media'%></div>
           <div id="caption"><%= image_form.text_field :caption, placeholder: 'caption'  %></div>
            <%#= f.submit %>
         <% end %>

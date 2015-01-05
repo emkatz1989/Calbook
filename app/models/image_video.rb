@@ -1,7 +1,7 @@
 class ImageVideo < ActiveRecord::Base
   belongs_to :day
   # attr_accessible :media, :caption
-  has_many :tag_types, as: :taggable
+  # has_many :tag_types, as: :taggable
 
 
 
