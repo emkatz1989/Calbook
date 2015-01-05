@@ -3,29 +3,23 @@
 	def index
 		@days = current_user.days
 		all_days = @days.map(&:date)
-		day = Date.today.beginning_of_month
-		while day <= Date.today.end_of_month
-			if !all_days.include? day
+		# day = Date.today.beginning_of_year
+		# while day <= Date.today.end_of_year
+		# 	if !all_days.include? day
 
-				# This allows us to build a new day thinger
-				# And we finally ... GAF	
-				new_day=Day.new(date: day)
-				new_day.blurbs.build
-				# new_day.blurbs.build
-				new_day.events.build
-				# new_day.events.build
-				# new_day.image_videos.build
-				new_day.image_videos.build
-				@days << new_day
-				puts ENV['GOOGLE_API_KEY']
-			end
-			day = day.next
+		# 		# This allows us to build a new day modal	
+		# 		new_day=Day.new(date: day)
+		# 		new_day.blurbs.build
+		# 		# new_day.blurbs.build
+		# 		#new_day.events.build
+		# 		# new_day.image_videos.build
+		# 		new_day.image_videos.build
+		# 		@days << new_day
+		# 		puts ENV['GOOGLE_API_KEY']
+		# 	end
+		# 	day = day.next
 
-			# google ApplicationControlleradfsadf
-
-			# sdfa
-			# @events
-		end
+		# end
 	end
 
 	def new
@@ -53,7 +47,7 @@
 	end
 
 	def update
-	   # raise("kissmykeester!")
+	   # raise("hello world!")
 	   @day = Day.find(params[:id])
 	    if @day.update(day_params)
 	      redirect_to :back

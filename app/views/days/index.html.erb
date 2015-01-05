@@ -3,68 +3,46 @@
     <% if current_user %>
     Logged in as <%= current_user.email %>.
     <%= link_to "Log Out", new_session_path("current") %>
-  <% else %>
+    <% else %>
       <%= link_to "Sign_up", new_session_path %>
     <% end %>
-  
-  </div>
+</div>
 
 <div id="calendar-container">
   <div id="calendar"></div>
 </div>
 <!-- <h3>Click A Day to Add an Entry!</h3> -->
-
-
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#dayShowModal">
-  Launch demo modal
-</button> -->
-
-<!-- Modal -->
-
-      <!--   ... -->
     
-
     <%#= binding.pry %>
-<!--     <div style="display:none"> -->
-      <% @days.each do |d| %>
+   <% @days.each do |d| %>
       
-        <div class="modal fade" id="dayShowModal<%= d.date %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="dayShowModal<%= d.date %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <%# @days.each do |day|%>
 
-        <h4 class="modal-title" id="modalTitle"><%= d.date %></h4>
+        <h4 class="modal-title" id="modalTitle"><%= d.date.readable_inspect %></h4>
       </div>
       <div class="modal-body" id="modalBody">
 
         <%= form_for d do |f| %>
       <%#=f.text_field :date, value: d.date %>
-      <div id = "events_form">
-      My Events
-        <%= f.hidden_field :user_id, value: current_user.id %>  <%= f.hidden_field :date, value: d.date %>
+    <!--   <div id = "events_form">
+      My Events -->
+        <%#= f.hidden_field :user_id, value: current_user.id %>  <%#= f.hidden_field :date, value: d.date %>
       
-        <%= f.fields_for :events do |events_form| %>
+        <%#= f.fields_for :events do |events_form| %>
 
-      
-         <div id= "event_title"><%= events_form.text_field :title, placeholder: 'title' %></div>
-         <div id= "event_description"> <%= events_form.text_field :text, placeholder: 'description' %></div>
-          <div id="event_start"><%= events_form.datetime_field :start_time, placeholder: 'start time'%></div>
-          <div id= "event_end"><%= events_form.datetime_field :end_time, placeholder: 'end time' %></div>
-        <% end %>
-      </div>
-          
-      <div id= "blurbs_form">
-
-          <!-- blurbs: -->
-        What I Did Today
-        <%= f.fields_for :blurbs do |blurbs_form| %>
-          <div id= "blurb"><%= blurbs_form.text_field :text, placeholder: 'text', :rows => "15", :cols => "80" %></div>
-        <% end %>
-
-      </div>
+      <!-- 
+         <div id= "event_title"><%#= events_form.text_field :title, placeholder: 'title' %></div>
+         <div id= "event_description"> <%#= events_form.text_field :text, placeholder: 'description' %></div>
+          <div id="event_start"><%#= events_form.datetime_field :start_time, placeholder: 'start time'%></div>
+          <div id= "event_end"><%#= events_form.datetime_field :end_time, placeholder: 'end time' %></div>
+        <%# end %>
+      </div> -->
+     
 
           
       <div id= "image_videos_form">
@@ -78,8 +56,18 @@
 
       </div>
 
+
+      <div id= "blurbs_form">
+
+          <!-- blurbs: -->
+        <%= f.fields_for :blurbs do |blurbs_form| %>
+          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'What I Did Today', size: "100x5", rows: 3 %></div>
+        <% end %>
+
+      </div>
+
            
-          <div class="submit-button"><%= f.submit %></div>
+      <div class="submit-button"><%= f.submit %></div>
         <%end%>
          </div>
       <div class="modal-footer">
@@ -92,14 +80,7 @@
       <%end%>
    
 
-
-     
-
-
 <script>
-
-
-
 
 </script>
  

@@ -25,16 +25,16 @@ $(document).on('ready page:load', function () {
   $('#signUpModal').addClass('animated bounceOutLeft').modal();
   }),
 
-$('#login_button').click(function(){
+  $('#login_button').click(function(){
   $('#loginModal').addClass('animated bounceOutLeft').modal();
 }),
 
   $('#calendar').fullCalendar({
   // ======put your options and callbacks here=====//
   header: {
-  		left:   '',
-        center: 'prev title next',
-        right:  ''
+  		left: '',
+        center:'prev title next',
+        right:''
   	},
 
   googleCalendarApiKey: 'GOOGLE_API_KEY',
@@ -47,30 +47,6 @@ $('#login_button').click(function(){
   handleWindowResize: true,
   editable: true,
   selectable: true,
- /////
-// function PreviewImage() {
-//         var oFReader = new FileReader();
-//         oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
-
-//         oFReader.onload = function (oFREvent) {
-//             document.getElementById("uploadPreview").src = oFREvent.target.result;
-//         };
-//     };
-/////
-
-
-  // $('.fc-day').hover(function(){
-  // 	$(this).find('.fc-day-content').css('border-color', 'red');
-  // },
-  // function(){
-  // 	$(this).find('#addToggle').remove();
-  // });
-
-
-  // eventMouseover: function( event, jsEvent, view ) {
-  // $(this).css('border-color', 'red');
-
-  //  },
 
   dayClick: function(date, jsEvent, view) {
 
@@ -85,14 +61,6 @@ $('#login_button').click(function(){
  //        $(this).css('background-color', 'red');
 
  // //====DANGER ZONE=======//
- //        // $('#modalTitle').html(event.title);
- //        // $('#modalBody').html(event.description);
- //        // $('#eventUrl').attr('href',event.url);
-        
-
-        // $('#dayModalShow').find('#modalTitle').append
-
-        // $("[data-date='this.data-date']")
         
 
         var date = $(this).attr("data-date");
@@ -106,28 +74,11 @@ $('#login_button').click(function(){
 
 
 
-
-
-
-
-        
-       
-        // $('#save-day').on('click', function(day){
-        //   console.log ('triggered');
-        //   day_id.save 
-        // });
-
-
 //====END OF DANGER ZONE====//
     
 
     }
-	
-
-
-
- 
-       
+    
 
   //   }
 

@@ -78,14 +78,12 @@ text-align: center;
 }
 
 #login_page_body{
-	// background-image: url("http://www.learnhebrewpod.com/images/library/holidays/yom-kippur/book-of-life.jpg");//
-	
-	// background-image: url("http://www.fubiz.net/wp-content/uploads/2013/12/Perpetual-Calendar1.jpg");
-	// background-image: url('http://www.graphicsfuel.com/wp-content/uploads/2012/02/calendar-icon-512x512.png');
-	
-	background-image: url(image-path('calendar-icon.png'));
+	background-image: url(asset-path('calendar-icon.png'));
 	background-size: cover;
+
 	margin: 0 auto;
+	// background-size: 1100px 650px;
+	// background-repeat: no-repeat;
 
 
 }
@@ -138,7 +136,7 @@ text-align: center;
     background-repeat: no-repeat;
     z-index: -100;
     margin: 0 auto;
-    width: 400px;
+    width: 300px;
     margin-top: 0px;
     margin-bottom: 30px;
 
@@ -189,7 +187,7 @@ text-align: center;
     background-repeat: no-repeat;
     z-index: -100;
     margin: 0 auto;
-    width: 400px;
+    width: 300px;
 
 }
 
