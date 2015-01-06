@@ -1,6 +1,6 @@
 
 <div id="user_header">
-    <% if current_user %>
+    <% if current_user != nil %>
     Logged in as <%= current_user.email %>.
     <%= link_to "Log Out", new_session_path("current") %>
     <% else %>
@@ -21,10 +21,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <%# @days.each do |day|%>
-
         <h4 class="modal-title" id="modalTitle"><%= d.date.to_formatted_s(:long) %></h4>
-       <!--  .readable_inspect as alt method for showing day -->
+       <!--  .readable_inspect as alt method for showing date in title -->
       </div>
       <div class="modal-body" id="modalBody">
 
@@ -51,29 +49,33 @@
         Add images
         <%= f.fields_for :image_videos do |image_form| %>
           <div id="media" input id="uploadImage" type="file" name="myPhoto">
-            <%= image_form.file_field :media, placeholder: 'media'%></div>
+            <%= image_form.file_field :media, placeholder: 'media'%>
+            <%#= image_tag image_form.media.url(:original) %>
+            
+          </div>
           <div id="caption"><%= image_form.text_field :caption, placeholder: 'caption'  %></div>
-           <%#= f.submit %>
         <% end %>
 
-      </div>
+     </div>
 
 
       <div id= "blurbs_form">
 
           <!-- blurbs: -->
         <%= f.fields_for :blurbs do |blurbs_form| %>
-          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'What I Did Today', size: "100x5", rows: 3 %></div>
+          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'What I Did Today', size: "51x33", rows: 3 %></div>
         <% end %>
 
       </div>
 
            
-      <div class="submit-button"><%= f.submit %></div>
-        <%end%>
-         </div>
+      
+       
+      </div>
       <div class="modal-footer">
+        <div class="submit-button"><%= f.submit %></div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         <%end%>
         <!-- <button type="button" class="btn btn-primary" id= "save-day">Save changes</button> -->
       </div>
     </div>
