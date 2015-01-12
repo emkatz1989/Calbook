@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "aws-sdk", :require => "aws-sdk"
+
 gem 'fullcalendar-rails'
 
 gem 'momentjs-rails'

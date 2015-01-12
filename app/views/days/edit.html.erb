@@ -1,8 +1,31 @@
-edit.html.erb
 
-<%= form_for @image_video do |f| %>
-	<%= f.file_field :media %>
-    <%= f.text_field :caption %>
-    <%= f.submit %>
-<% end %>
+<%= debug @day %>
+<%= debug @day.blurbs %>
+<%= debug @day.image_videos %>
+<%= debug @day.errors %>
+<%= @day.inspect %>
+
+
+
+   <%= form_for @day, :html => {:multipart => true} do |f| %>
+    <%= f.fields_for :blurbs do |blurbs_form| %>
+          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'How was your day?', size: "115x9", rows: 3 %></div>
+        <% end %>
+    <%= f.fields_for :image_videos do |image_form| %>
+           <div id="media" input id="uploadImage" type="file" name="myPhoto">
+            <%= image_form.file_field :media, placeholder: 'media'%>
+           </div>
+        <% end %>
+      <div class="submit-button"><%= f.submit %>
+      </div>
+        <% end %>
+
+
+
+
+
+
+
+
+
 

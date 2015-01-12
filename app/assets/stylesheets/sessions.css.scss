@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+#login_page_body{
+	background-image: url(asset-path('calendar-icon.png'));
+	background-size: cover;
+
+	margin: 0 auto;
+	// background-size: 1100px 650px;
+	background-repeat: no-repeat;
+
+
+}
+
+
+
+
 .welcome-header{
 
 	text-align: center;
@@ -77,16 +92,6 @@ text-align: center;
 
 }
 
-#login_page_body{
-	background-image: url(asset-path('calendar-icon.png'));
-	background-size: cover;
-
-	margin: 0 auto;
-	// background-size: 1100px 650px;
-	// background-repeat: no-repeat;
-
-
-}
 
 
 

@@ -1,5 +1,6 @@
 class ImageVideo < ActiveRecord::Base
   belongs_to :day
+  
   # attr_accessible :media, :caption
   # has_many :tag_types, as: :taggable
 
@@ -12,7 +13,7 @@ class ImageVideo < ActiveRecord::Base
       :medium   => ['250x250',    :jpg],
       :large    => ['500x500>',   :jpg]
     }
-    validates_attachment_content_type :media, content_type: ["media/jpg", "media/jpeg", "media/png", "media/gif"]
+    validates_attachment_content_type :media, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
 
 #paperclip ffmpeg

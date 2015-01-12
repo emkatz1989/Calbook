@@ -1,92 +1,79 @@
 
 <div id="user_header">
     <% if current_user != nil %>
-    Logged in as <%= current_user.email %>.
+    Logged in as <%= current_user.email %>
     <%= link_to "Log Out", new_session_path("current") %>
-    <% else %>
-      <%= link_to "Sign_up", new_session_path %>
-    <% end %>
 </div>
 
+<!-- CALENDAR BODY -->
 <div id="calendar-container">
   <div id="calendar"></div>
 </div>
-<!-- <h3>Click A Day to Add an Entry!</h3> -->
-    
-    <%#= binding.pry %>
-   <% @days.each do |d| %>
+
+<!-- DAYS MODAL FORM -->
+<%@days.each do |d| %>
       
-<div class="modal fade" id="dayShowModal<%= d.date %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="modalTitle"><%= d.date.to_formatted_s(:long) %></h4>
+  <div class="modal fade" id="dayShowModal<%= d.date %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+          </button>
+        <h4 class="modal-title" id="modalTitle"><%= d.date.to_formatted_s(:long) %>
+        </h4>
        <!--  .readable_inspect as alt method for showing date in title -->
-      </div>
-      <div class="modal-body" id="modalBody">
+       </div>
+  
 
+  <!-- MODAL BODY STARTS HERE -->
+  <div class="modal-body" id="modalBody">
         <%= form_for d do |f| %>
-      <%#=f.text_field :date, value: d.date %>
-    <!--   <div id = "events_form">
-      My Events -->
-        <%#= f.hidden_field :user_id, value: current_user.id %>  <%#= f.hidden_field :date, value: d.date %>
-      
-        <%#= f.fields_for :events do |events_form| %>
+          <div id= "image_videos_form">
+        <%= image_tag d.image_videos[0].media.url(:original) %>
 
-      <!-- 
-         <div id= "event_title"><%#= events_form.text_field :title, placeholder: 'title' %></div>
-         <div id= "event_description"> <%#= events_form.text_field :text, placeholder: 'description' %></div>
-          <div id="event_start"><%#= events_form.datetime_field :start_time, placeholder: 'start time'%></div>
-          <div id= "event_end"><%#= events_form.datetime_field :end_time, placeholder: 'end time' %></div>
-        <%# end %>
-      </div> -->
-     
-
-          
-      <div id= "image_videos_form">
-
-        Add images
-        <%= f.fields_for :image_videos do |image_form| %>
-          <div id="media" input id="uploadImage" type="file" name="myPhoto">
-            <%= image_form.file_field :media, placeholder: 'media'%>
-            <%#= image_tag image_form.media.url(:original) %>
-            
-          </div>
-          <div id="caption"><%= image_form.text_field :caption, placeholder: 'caption'  %></div>
-        <% end %>
-
+          <!-- <div id="caption"><%#= image_form.text_field :caption, placeholder: 'caption'  %></div> -->
      </div>
-
-
-      <div id= "blurbs_form">
+       <div id= "blurbs_form">
 
           <!-- blurbs: -->
         <%= f.fields_for :blurbs do |blurbs_form| %>
-          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'What I Did Today', size: "51x33", rows: 3 %></div>
+          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'How was your day?', size: "115x9", rows: 3 %></div>
         <% end %>
 
       </div>
-
-           
-      
-       
-      </div>
-      <div class="modal-footer">
-        <div class="submit-button"><%= f.submit %></div>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-         <%end%>
-        <!-- <button type="button" class="btn btn-primary" id= "save-day">Save changes</button> -->
-      </div>
-    </div>
   </div>
-</div>
-      <%end%>
+<!-- MODAL BODY ENDS HERE -->  
+      
+
+  <div class="modal-footer">
+    <div class="load-images">
+        Add images
+          <%= f.fields_for :image_videos do |image_form| %>
+          <div id="media" input id="uploadImage" type="file" name="myPhoto">
+            <%= image_form.file_field :media, placeholder: 'media'%>
+            <%= image_form.submit %>
+          </div>
+          <% end %>
+        <div class="submit-button"><%= f.submit %>
+        </div>
+        <%end%>
+   </div>
+       
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+   <!-- <button type="button" class="btn btn-primary" id= "save-day">Save changes</button> -->
+  </div>
+  </div>
+  </div>
+  </div>
+<%end%>
    
 
-<script>
 
-</script>
+
+ <% else %>
+      <%= link_to "Sign_up", new_session_path %>
+<% end %>
  
 
 

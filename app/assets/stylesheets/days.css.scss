@@ -3,7 +3,8 @@
 // Day Modal Window//
 
 .modal-dialog{
-width: 900px;
+width: 670px;
+background-image: url(asset-path('modal-background.jpg'));
 // height: 1500px;
 
 }
@@ -14,9 +15,11 @@ width: 900px;
 #modalBody{
 
 	// background-color: rgb(0,0,128);
-	background-image: url(asset-path('modal-background.jpg'));
-	height: 600px;
-	width: 897px;
+	// background-image: url(asset-path('modal-background.jpg'));
+	background-color: red;
+	height: 590px;
+	width: 666px;
+	padding: 10px;
 
 }
 
@@ -27,10 +30,10 @@ text-align: center;
 border: 1px solid black;
 font-size: 12px;
 background-image: url(asset-path('modal-background.jpg'));
-height: 548px;
-width: 300px;
-display: inline-block;
-float: right;
+height: 154px;
+width: 650px;
+// display: inline-block;
+// float: right;
 
 }
 
@@ -41,11 +44,22 @@ text-align: center;
 border: 1px solid black;
 font-size: 20px;
 background-image: url(asset-path('modal-background.jpg'));
-display: inline-block;
-float: left;
-height: 547px;
-width: 550px;
+// display: inline-block;
+// float: left;
+height: 400px;
+width: 650px;
 padding-bottom: 10px;
+}
+
+.modal-footer{
+	display: inline;
+	padding: 10px;
+	margin-left: 20px;
+}
+
+.load-images{
+	display: inline;
+	margin-left: 20px;
 }
 
 .submit-button{
@@ -54,9 +68,20 @@ padding-bottom: 10px;
 	color: red;
 	border-radius: 10px;
 	text-align:center;
+	display: inline;
+	padding: 20px;
 }
 
-button{
-	
+#media{
+	margin-left: 40px;
+	display: inline;
+	padding: 10px;
 }
+
+.btn btn-default{
+	display: inline;
+	padding:20px;
+	margin-right: 10px;
+}
+
 

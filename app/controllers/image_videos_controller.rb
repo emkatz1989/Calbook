@@ -16,7 +16,7 @@ class ImageVideosController < ApplicationController
 		# @user_id = current_user.id
 		@image_video = ImageVideo.new(image_video_params)
 		if @image_video.save
-			redirect_to new_session_path
+			redirect_to days_path
 		else
 			redirect_to :back
 		end
@@ -28,10 +28,21 @@ class ImageVideosController < ApplicationController
 		redirect_to(:back)
 	end
 
+	def update
+	   # raise("hello world!")
+	  	@image_video = ImageVideo.find(params[:id])
+	    if @image_video.update(image_video_params)
+	      redirect_to :back
+	    else
+	      render 'edit'
+	      
+	    end
+  	end
+
 	private
 
 	def image_video_params
-		params.require(:image_video).permit(:day_id, :media, :caption)
+		params.require(:image_video).permit(:id, :user_id, :day_id, :media, :caption)
 	end
 
 end
