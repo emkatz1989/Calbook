@@ -20,6 +20,9 @@
 //= require bootstrap
 //= require_tree .
 
+
+
+
 $(document).on('ready page:load', function () {
   $('#signup_button').click(function(){
 
@@ -32,11 +35,15 @@ $(document).on('ready page:load', function () {
 
   $('#calendar').fullCalendar({
   // ======put your options and callbacks here=====//
+  
+
+
   header: {
-  		left: '',
-        center:'prev title next',
-        right:''
+  		left: 'prev',
+        center:'title',
+        right:'next'
   	},
+
 
   googleCalendarApiKey: '<%= ENV['GOOGLE_API_KEY'] %>',
         events: {

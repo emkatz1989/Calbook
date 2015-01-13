@@ -29,7 +29,7 @@
   <div class="modal-body" id="modalBody">
         <%= form_for d do |f| %>
           <div id= "image_videos_form">
-        <%= image_tag d.image_videos[0].media.url(:original) %>
+        <%= image_tag d.image_videos[0].media.url(:large) %>
 
           <!-- <div id="caption"><%#= image_form.text_field :caption, placeholder: 'caption'  %></div> -->
      </div>
