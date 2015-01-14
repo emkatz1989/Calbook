@@ -11,8 +11,7 @@
 </div>
 
 <!-- DAYS MODAL FORM -->
-<%@days.each do |d| %>
-      
+<%@days.each do |d| %>    
   <div class="modal fade" id="dayShowModal<%= d.date %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -27,39 +26,42 @@
 
   <!-- MODAL BODY STARTS HERE -->
   <div class="modal-body" id="modalBody">
-        <%= form_for d do |f| %>
-          <div id= "image_videos_form">
+  <!--   <div id="modal-day"><%#=d.date%></div> -->
+    <%= form_for d do |f| %>
+     <div id= "image_videos_form">
         <%= image_tag d.image_videos[0].media.url(:large) %>
 
           <!-- <div id="caption"><%#= image_form.text_field :caption, placeholder: 'caption'  %></div> -->
      </div>
-       <div id= "blurbs_form">
+
+     <div id= "blurbs_form">
 
           <!-- blurbs: -->
         <%= f.fields_for :blurbs do |blurbs_form| %>
-          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'How was your day?', size: "115x9", rows: 3 %></div>
+          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'How was your day?', size: "100x4", rows: 3 %></div>
         <% end %>
 
-      </div>
-  </div>
+    </div>
+</div>
 <!-- MODAL BODY ENDS HERE -->  
       
 
   <div class="modal-footer">
     <div class="load-images">
-        Add images
           <%= f.fields_for :image_videos do |image_form| %>
           <div id="media" input id="uploadImage" type="file" name="myPhoto">
             <%= image_form.file_field :media, placeholder: 'media'%>
-            <%= image_form.submit %>
+            <!-- <input type="file"/> -->
+            <%= image_form.submit "Add Image" %>
           </div>
           <% end %>
-        <div class="submit-button"><%= f.submit %>
+        
+   </div>
+   <div class="submit-button"><%= f.submit %>
         </div>
         <%end%>
-   </div>
        
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
 
    <!-- <button type="button" class="btn btn-primary" id= "save-day">Save changes</button> -->
   </div>

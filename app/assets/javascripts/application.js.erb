@@ -21,8 +21,6 @@
 //= require_tree .
 
 
-
-
 $(document).on('ready page:load', function () {
   $('#signup_button').click(function(){
 
@@ -39,10 +37,16 @@ $(document).on('ready page:load', function () {
 
 
   header: {
-  		left: 'prev',
-        center:'title',
-        right:'next'
+  		left: 'today',
+        center:'prev title next',
+        right:'month, basicDay'
   	},
+
+  // views:{
+  //   month: {
+  //     titleFormat: 'YYYY'
+  //   }
+  // },
 
 
   googleCalendarApiKey: '<%= ENV['GOOGLE_API_KEY'] %>',
@@ -54,9 +58,9 @@ $(document).on('ready page:load', function () {
   defaultView: 'month',
   handleWindowResize: true,
   editable: true,
-  selectable: true,
+  selectable: false,
 
-  dayClick: function(date, jsEvent, view) {
+  dayClick: function(date, allDay, jsEvent, view) {
 
          // alert('Clicked on: ' + date.format();
 
@@ -72,9 +76,21 @@ $(document).on('ready page:load', function () {
         // Dig up the proper modal
 //        $('#dateId').val(date);
 
-      
+
+ // if (allDay) {
+ //            // Clicked on the entire day 
+
+ //                $('#calendar') 
+ //                    .fullCalendar('changeView','basicDay') 
+ //                    .fullCalendar('gotoDate', date.getFullYear(), date.getMonth(), date.getDate()); 
+            
+ //        }
+
 
        $('#dayShowModal'+ date).modal();
+       
+
+
        // $('#mylightbox').ekkoLightbox(options);
 
 
