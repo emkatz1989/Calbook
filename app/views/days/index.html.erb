@@ -49,16 +49,16 @@
   <div class="modal-footer">
     <div class="load-images">
           <%= f.fields_for :image_videos do |image_form| %>
-          <div id="media" input id="uploadImage" type="file" name="myPhoto">
+          <!-- <div id="media" input id="uploadImage" type="file" name="myPhoto"> -->
             <%= image_form.file_field :media, placeholder: 'media'%>
             <!-- <input type="file"/> -->
             <%= image_form.submit "Add Image" %>
-          </div>
+        <!--   </div> -->
           <% end %>
         
    </div>
    <div class="submit-button"><%= f.submit %>
-        </div>
+  </div>
         <%end%>
        
   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
