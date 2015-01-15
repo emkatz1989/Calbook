@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//***********Page Body********//
 
 #login_page_body{
 	background-image: url(asset-path('calendar-icon.png'));
@@ -14,7 +15,7 @@
 
 }
 
-
+//*******Header Container*********//
 
 
 .welcome-header{
@@ -26,6 +27,8 @@
 
 }
 
+
+//********Calbook word*******//
 #welcome{
 	margin-top: 20px;
 	font-size: 50px;
@@ -35,11 +38,15 @@
 
 }
 
+//*******Blurb and Image******//
 #welcome-blurb{
 
 	color: black;
+	padding-bottom: 20px;
 }
 
+
+//*******Modal Title**********//
 
 #modalTitle{
 
@@ -52,18 +59,23 @@ text-align: center;
 
 }
 
+//*****sign-up modal*****//
+
 #sign-up.modal-body{
 	// background-color: red;
 	padding:10px;
+	text-align: center;
+
 	// padding-bottom: 10px;
 }
 
-#login.modal-body{
+// #login.modal-body{
 
-// background-color: red;
-// padding-bottom: 10px;
+//  background-color: red;
+//  padding-bottom: 10px;
 
-}
+// }
+
 #signup_form{
 
 	text-align: center;
@@ -77,37 +89,23 @@ text-align: center;
 
 }
 
+//*****login modal*******//
+
 
 #login_form{
 
 	text-align: center;
-	margin-left: 25%;
-	margin-right: auto;
+	// margin-left: 25%;
+	// margin-right: auto;
 	position: relative;
 	border-radius: 90px;
 	transition: all .3s ease-in-out;
 	width: 150px;
 
-
-
 }
 
 
-
-
-#login_signup_container{
-	margin: 0 auto;
-	width: 30%;
-	position: relative;
-	top: 30%;
-	z-index: 100;
-	border: 2px solid black;
-	border-radius: 10px;
-	margin-bottom: 70px;
-
-}
-
-
+//*******SIGNUP BUTTON*****//
 
 
 #signup_button {
@@ -130,7 +128,7 @@ text-align: center;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:arial;
-	font-size:50px;
+	font-size:30px;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
@@ -159,6 +157,7 @@ text-align: center;
 }
 
 
+//********LOGIN BUTTON*******//
 
 
 #login_button {
@@ -181,7 +180,7 @@ text-align: center;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:arial;
-	font-size:50px;
+	font-size:30px;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #810e05;
@@ -192,6 +191,7 @@ text-align: center;
     background-repeat: no-repeat;
     z-index: -100;
     margin: 0 auto;
+    margin-bottom: 20px !important;
     width: 300px;
 
 }
@@ -205,6 +205,8 @@ text-align: center;
 	transition: all .1s ease-in-out;
 }
 
+
+//**********SUBMIT BUTTON*******//
 
 .submit_button{
 
@@ -240,7 +242,17 @@ text-align: center;
 
 
 
+// #login_signup_container{
+// 	margin: 0 auto;
+// 	width: 30%;
+// 	position: relative;
+// 	top: 30%;
+// 	z-index: 100;
+// 	border: 2px solid black;
+// 	border-radius: 10px;
+// 	margin-bottom: 70px;
 
+// }
 
 
 

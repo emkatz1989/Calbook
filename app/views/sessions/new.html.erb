@@ -13,9 +13,8 @@
       <h2> A simple lifelogging utility. </h2>
       <img src="http://paulcbrunson.com/wp-content/uploads/2014/01/SmilingSelfie.jpg">
       <h3> Keep a calendar with a built-in journal. </h3>
-      <h3> Add the day's pictures and videos! </h3>
  </div>
-</div>
+ </div>
 
 
  <a href='#' id="signup_button"> Sign Up</a>
@@ -66,7 +65,7 @@
         <h4 class="modal-title" id="myModalLabel">LOGIN</h4>
       </div>
       <div class="modal-body" id="login">
-        <div id="login_form"><h1>  </h1>
+        <div id="login_form">
    <%= form_for(@user,{url:sessions_path}) do |f| %> 
    <%= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
    <%= f.password_field :password, :placeholder => "password", :class => "input_field" %>
@@ -111,17 +110,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

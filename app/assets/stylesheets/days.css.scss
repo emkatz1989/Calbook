@@ -1,20 +1,16 @@
 
-
-// Day Modal Window//
-
+//*********Day modal header and 'x' close button*******//
 .close{
 	color: white;
 }
-
 
 .modal-header{
 	background-color: red;
 	color: white;
 }
 
-.modal-content{}
 
-//Day Modal Body//
+//*******Day Modal Body********//
 
 #modalBody{
 
@@ -29,6 +25,7 @@
 
 }
 
+//******image container*******//
 
 #image_videos_form{
 text-align: center;
@@ -47,6 +44,9 @@ margin: 30px auto;
 //  box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
 }
 
+//*********blurb container*******//
+
+
 #blurbs_form{
 // text-align: center;
 // // padding: 40px;
@@ -64,6 +64,8 @@ margin: 30px auto;
 
 }
 
+//******blurb text area*******//
+
 #blurb{
 	text-align: center;
 	font-size: 12px;
@@ -73,12 +75,16 @@ margin: 30px auto;
 	position: absolute;
 }
 
+//*****Image Upload*******//
+
 .load-images{
 	display: inline-block;
 	margin: 10px ;
 	padding-top: 10px;
 	background-color: red;
 }
+
+//******Modal Footer*******//
 
 .modal-footer{
 	// display: inline-block;
@@ -91,13 +97,14 @@ margin: 30px auto;
 }
 
 
+///******submit day button *******//
 
 .submit-button{
 	// margin-bottom: 10px;
 	// margin-left: 60px;
 	color: red;
 	border-radius: 10px;
-	text-align:center;
+	text-align: center;
 	display: inline-block;
 	position: relative;
 	// padding: 10px;
@@ -109,11 +116,12 @@ margin: 30px auto;
 	// padding: 10px;
 }
 
+
+//******Close Modal button*******//
 .btn btn-default{
 	// position: relative;
+	padding: 10px;
 }
-.fc-other-month .fc-day-number { 
-	display:none;
-}
+
 
 

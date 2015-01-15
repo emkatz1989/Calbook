@@ -22,14 +22,20 @@
 
 
 $(document).on('ready page:load', function () {
+  
+  //login and sign-up modals//
+
   $('#signup_button').click(function(){
 
-  $('#signUpModal').addClass('animated bounceOutLeft').modal();
+  $('#signUpModal').modal();
   }),
 
   $('#login_button').click(function(){
-  $('#loginModal').addClass('animated bounceOutLeft').modal();
+  $('#loginModal').modal();
 }),
+
+
+ //calendar functions//
 
   $('#calendar').fullCalendar({
   // ======put your options and callbacks here=====//
@@ -42,12 +48,6 @@ $(document).on('ready page:load', function () {
         right:'month, basicDay'
   	},
 
-  // views:{
-  //   month: {
-  //     titleFormat: 'YYYY'
-  //   }
-  // },
-
 
   googleCalendarApiKey: '<%= ENV['GOOGLE_API_KEY'] %>',
         events: {
@@ -59,6 +59,8 @@ $(document).on('ready page:load', function () {
   handleWindowResize: true,
   editable: true,
   selectable: false,
+
+//clicking on a day//
 
   dayClick: function(date, allDay, jsEvent, view) {
 
@@ -73,36 +75,19 @@ $(document).on('ready page:load', function () {
         
 
         var date = $(this).attr("data-date");
-        // Dig up the proper modal
-//        $('#dateId').val(date);
-
-
- // if (allDay) {
- //            // Clicked on the entire day 
-
- //                $('#calendar') 
- //                    .fullCalendar('changeView','basicDay') 
- //                    .fullCalendar('gotoDate', date.getFullYear(), date.getMonth(), date.getDate()); 
-            
- //        }
+    
+    // Dig up the proper modal
+    // $('#dateId').val(date);
 
 
        $('#dayShowModal'+ date).modal();
        
-
-
-       // $('#mylightbox').ekkoLightbox(options);
-
-
 
 //====END OF DANGER ZONE====//
     
 
     }
     
-
-  
-
   //======end of callbacks========///
   })
 });
