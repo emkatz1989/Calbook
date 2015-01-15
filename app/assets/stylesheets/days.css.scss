@@ -4,6 +4,13 @@
 	color: white;
 }
 
+
+#dayShowModal{
+	max-height: 80%;
+	overflow-y: auto;
+}
+
+
 .modal-header{
 	background-color: red;
 	color: white;
@@ -20,6 +27,9 @@
 	background: #222;
 	height: 592px;
 	width: 599px;
+
+	max-height: none;
+
 	// padding: 10px;
 	// margin: 0 auto;
 

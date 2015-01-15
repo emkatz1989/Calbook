@@ -40,7 +40,7 @@
 
 //*******Blurb and Image******//
 #welcome-blurb{
-
+	padding-top: 20px;
 	color: black;
 	padding-bottom: 20px;
 }
@@ -95,8 +95,8 @@ text-align: center;
 #login_form{
 
 	text-align: center;
-	// margin-left: 25%;
-	// margin-right: auto;
+	margin-left: 25%;
+	margin-right: auto;
 	position: relative;
 	border-radius: 90px;
 	transition: all .3s ease-in-out;

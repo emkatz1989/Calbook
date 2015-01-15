@@ -41,8 +41,12 @@ Rails.application.configure do
     :bucket => 'calbookapp-dev',
   
 
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+      :access_key_id => 'AKIAJYHE37GFDBEQD2EQ',
+
+      # ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => 'A4s6NoWMelVErO0MSo69SYljRkZdJpBT8qNW7HlV',
+
+      # ENV['AWS_SECRET_ACCESS_KEY'],
       
       :region => 'us-east-1'
     }
