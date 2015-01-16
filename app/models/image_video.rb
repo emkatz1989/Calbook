@@ -10,7 +10,7 @@ class ImageVideo < ActiveRecord::Base
    :styles => {
       :original => ['1920x1680>', :jpg],
       :small    => ['100x100#',   :jpg],
-      :medium   => [' 250x250',    :jpg],
+      :medium   => [' 350x350',    :jpg],
       :large    => ['500x500>',   :jpg]
     }
     validates_attachment_content_type :media, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
