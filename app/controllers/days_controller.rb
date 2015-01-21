@@ -50,7 +50,6 @@
 	end
 
 	def update
-	   # raise("hello world!")
 	   @day = Day.find(params[:id])
 	    
 	    if @day.update(day_params)
@@ -74,8 +73,3 @@
 	end
 
 end
-
-# "day"=>{"user_id"=>"13", "day_id"=>""}, 
-# "events"=>{"title"=>"a", "text"=>"a", "start_time"=>"a", "end_time"=>"a"}, 
-# "blurbs"=>{"text"=>"a"}, 
-# "image_videos"=>{"caption"=>"a"}
