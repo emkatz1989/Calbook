@@ -10,11 +10,13 @@ class ImageVideo < ActiveRecord::Base
    :styles => {
       :original => ['1920x1680>', :jpg],
       :small    => ['100x100#',   :jpg],
-      :medium   => [' 350x350',    :jpg],
+      :medium   => [' 400x400',    :jpg],
       :large    => ['500x500>',   :jpg]
     }
     validates_attachment_content_type :media, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
+    attr_accessor :delete_media
+    before_validation { media.clear if delete_media == '1' }
 
 #paperclip ffmpeg
 
