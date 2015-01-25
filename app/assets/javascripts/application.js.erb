@@ -54,11 +54,16 @@ $(document).on('ready page:load', function () {
           googleCalendarId: 'emkatz1989@gmail.com',
             className: 'gcal-event' // an option!
         },
+        eventRender: function(event, element){
+          element.css("background-color", "#335C99");
+        },
+       
 
   defaultView: 'month',
   handleWindowResize: true,
   editable: true,
   selectable: false,
+ 
 
 //clicking on a day//
 
