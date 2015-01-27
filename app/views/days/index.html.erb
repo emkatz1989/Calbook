@@ -48,7 +48,9 @@
   <!--   <div id="modal-day"><%#=d.date%></div> -->
     <%= form_for d do |f| %>
      <div id= "image_videos_form">
-        <%= image_tag d.image_videos[0].media.url(:medium) %>
+        <%= image_tag d.image_videos[0].media.url(:medium), :class => "style_image" %>
+
+
 
           <!-- <div id="caption"><%#= image_form.text_field :caption, placeholder: 'caption'  %></div> -->
      </div>
@@ -57,6 +59,7 @@
 
           <!-- blurbs: -->
         <%= f.fields_for :blurbs do |blurbs_form| %>
+        TESTING
          <%= blurbs_form.text_area :text, placeholder: 'How was your day?' %>
         <% end %>
 
