@@ -1,13 +1,28 @@
 
-<div class="user_header">
+<!-- <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#"><%#=current_user.email%></a></li>
+  <li role="presentation"><a href="#">Calbook</a></li>
+  <li role="presentation"><a href="#"><%#= link_to "Log Out", new_session_path("current") %></a></li>
+</ul> -->
+
+
+
+<div id="user_header">
   <div id="email">
     <% if current_user != nil %>
     <%= current_user.email %>
   </div>
+  <div id="calbook-logo">
+    <h1> Calbook</h1>
+
+  </div>
+
   <div id="logout">
-    <%= link_to "Log Out", new_session_path("current") %>
+      <%= link_to "Log Out", new_session_path("current") %>
   </div>
 </div>
+
+
 
 <!-- CALENDAR BODY -->
 <div id="calendar-container">
@@ -42,7 +57,7 @@
 
           <!-- blurbs: -->
         <%= f.fields_for :blurbs do |blurbs_form| %>
-          <div id="blurb"><%= blurbs_form.text_area :text, placeholder: 'How was your day?' %></div>
+         <%= blurbs_form.text_area :text, placeholder: 'How was your day?' %>
         <% end %>
 
     </div>
@@ -54,9 +69,10 @@
     <div class="load-images">
           <%= f.fields_for :image_videos do |image_form| %>
           <!-- <div id="media" input id="uploadImage" type="file" name="myPhoto"> -->
+            <div id="image-header">Add Image</div>
             <%= image_form.file_field :media, placeholder: 'media'%>
             <!-- <input type="file"/> -->
-            <%= image_form.submit "Add Image" %>
+            <%#= image_form.submit "Add Image" %>
        
           <% end %>
         
