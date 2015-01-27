@@ -44,9 +44,10 @@ $(document).on('ready page:load', function () {
 
   header: {
   		left: '',
-        center:'prev title next',
-        right:''
+      center:'prev title next',
+      right:''
   	},
+  
 
 
   googleCalendarApiKey: '<%= ENV['GOOGLE_API_KEY'] %>',
@@ -54,9 +55,10 @@ $(document).on('ready page:load', function () {
           googleCalendarId: 'emkatz1989@gmail.com',
             className: 'gcal-event' // an option!
         },
-        eventRender: function(event, element){
+        eventRender: function(event, element, view){
           // element.css("background-color", "#335C99");
           element.css("background-color", "#B20000");
+
         },
        
 

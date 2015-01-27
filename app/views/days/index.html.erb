@@ -18,7 +18,7 @@
   </div>
 
   <div id="logout">
-      <%= link_to "Log Out", new_session_path("current") %>
+      <%= link_to "Log Out", new_session_path("current"), {:style=>'color: white;'} %>
   </div>
 </div>
 
@@ -72,7 +72,7 @@
     <div class="load-images">
           <%= f.fields_for :image_videos do |image_form| %>
           <!-- <div id="media" input id="uploadImage" type="file" name="myPhoto"> -->
-            <div id="image-header">Add Image</div>
+            <div id="image-header" style="color: white">Add Image</div>
             <%= image_form.file_field :media, placeholder: 'media'%>
             <!-- <input type="file"/> -->
             <%#= image_form.submit "Add Image" %>
