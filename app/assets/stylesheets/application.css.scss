@@ -59,7 +59,14 @@ body{
   // z-index: 2000;
   // background-color: red;
   // opacity: 0.9
-  background-color: red;
+  // background-image: url('http://freetwitterheaders.com/wp-content/uploads/2012/09/Gradient_07.jpg');
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+  background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color:#c62d1f;
   margin: 0 auto;
 }
 
@@ -160,7 +167,14 @@ body{
 td.fc-widget-header{
 
   // background-color: #335C99;
-  background-color: #B20000;
+  // background-color: #B20000;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+  background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color:#c62d1f;
   color: white;
 }
 
@@ -178,7 +192,13 @@ background: #f2f5f7;
 }
 
 td.fc-day.fc-widget-content:hover {
-  background-color: red;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
+  background:-moz-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-webkit-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-o-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:-ms-linear-gradient(top, #c62d1f 5%, #f24437 100%);
+  background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color:#c62d1f;
 
 }
 
