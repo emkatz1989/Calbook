@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		@auth = request.env['omniauth.auth']['credentials']
-		Token.create(
-			access_token: @auth['token'],
-			refresh_token: @auth['refresh_token'],
-			expires_at: Time.at(@auth['expires_at']).to_datetime)
+		# @auth = request.env['omniauth.auth']['credentials']
+		# Token.create(
+		# 	access_token: @auth['token'],
+		# 	refresh_token: @auth['refresh_token'],
+		# 	expires_at: Time.at(@auth['expires_at']).to_datetime)
 			
 		#u = User.where(params[:user][:email]).first
 		u = User.find_by_email(params[:user][:email])
