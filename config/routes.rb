@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :tags
   resources :tag_types
   root 'sessions#new'
-  # get "/auth/:provider/callback" => 'sessions#create'
+  get "/auth/:provider/callback" => 'sessions#create'
   get '/gcal' => 'base#gcal'
 end
   # The priority is based upon order of creation: first created -> highest priority.

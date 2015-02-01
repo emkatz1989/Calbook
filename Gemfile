@@ -29,9 +29,9 @@ group :development, :test do
 	
 end
 
-# gem 'omniauth'
-# gem 'omniauth-google-oauth2'
-# gem 'json'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'json'
 
 
 # group :development do
