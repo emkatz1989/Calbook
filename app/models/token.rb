@@ -1,13 +1,13 @@
 require 'net/http'
 require 'json'
-
+ 
 class Token < ActiveRecord::Base
-
+ 
   def to_params
-  	{'refresh_token' => refresh_token,
-  	 'client_id' => ENV['GOOGLE_CLIENT_ID'],
-  	 'client_secret' => ENV['GOOGLE_CLIENT_SECRET']
-     'grant_type' => 'refresh_token'}
+    {'refresh_token' => refresh_token,
+    'client_id' => ENV['GOOGLE_CLIENT_ID'],
+    'client_secret' => ENV['GOOGLE_CLIENT_SECRET'],
+    'grant_type' => 'refresh_token'}
   end
  
   def request_token_from_google
@@ -31,13 +31,6 @@ class Token < ActiveRecord::Base
     refresh! if expired?
     access_token
   end
-
-  	}
-
-
-
-
-
-
-
+ 
 end
+
