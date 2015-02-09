@@ -66,7 +66,7 @@ margin: 20px auto;
 .style_image{
 
 	// margin-bottom: 20px;
-	// border: 3px solid black;
+	border: 2px solid black;
 
 }
 
@@ -116,7 +116,8 @@ textarea{
 //*****Image Upload*******//
 
 .load-images{
-	display: inline-block;
+	display: inline;
+	float: left;
 	// margin: 10px ;
 	// padding-top: 10px;
 }
@@ -139,7 +140,8 @@ textarea{
 	// float: center;
 	// padding-top: 20px;
 	// margin: 10px 10px;
-	float: center;
+	text-align: center;
+	// float: center;
 	padding: 20px 20px;
 	// background-color: #335C99;
   background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24437));
@@ -172,15 +174,15 @@ textarea{
 	// margin-left: 60px;
 	
 	border-radius: 90px;
-	text-align: center;
-	display: inline-block;
-	position: relative;
+	// text-align: center;
+	display: inline;
+	// position: relative;
 	width: 150px;
 	height: 30px;
-	margin-right: 60px;
+	margin-right: 160px;
 	// background-color: red;
 
-	// padding: 10px;
+	padding: 10px;
 }
 
 
@@ -188,7 +190,8 @@ textarea{
 //******Close Modal button*******//
 .btn btn-default{
 	// position: relative;
-	padding-left: 30px;
+	// padding-left: 30px;
+	float: right;
 }
 
 
