@@ -23,6 +23,16 @@
 	color: white;
 }
 
+.input_field{
+	width: 150px;
+	height: 30px;
+	background-color: white;
+	border-radius: 90px;
+	margin-bottom: 10px;
+	text-indent: 20px;
+	display: block;
+}
+
 
 //*******Day Modal Body********//
 
@@ -66,7 +76,7 @@ margin: 20px auto;
 .style_image{
 
 	// margin-bottom: 20px;
-	border: 2px solid black;
+	// border: 2px solid black;
 
 }
 
@@ -116,10 +126,9 @@ textarea{
 //*****Image Upload*******//
 
 .load-images{
-	display: inline;
+	// display: inline;
 	float: left;
-	// margin: 10px ;
-	// padding-top: 10px;
+	
 }
 
 #image-header{
@@ -158,31 +167,23 @@ textarea{
 
 ///******submit day button *******//
 
-.input_field{
-	width: 150px;
-	height: 30px;
-	background-color: white;
-	border-radius: 90px;
-	margin-bottom: 10px;
-	text-indent: 20px;
-	display: block;
-}
+
 
 
 .submit-button{
 	// margin-bottom: 10px;
 	// margin-left: 60px;
 	
-	border-radius: 90px;
+	border-radius: 100%;
 	// text-align: center;
 	display: inline;
+	float: center;
+	// margin-right: 90%;
 	// position: relative;
-	width: 150px;
-	height: 30px;
-	margin-right: 160px;
+	// margin-right: 160px;
 	// background-color: red;
-
-	padding: 10px;
+	padding-right: 135px;
+	margin-top: 30px;
 }
 
 
@@ -192,6 +193,8 @@ textarea{
 	// position: relative;
 	// padding-left: 30px;
 	float: right;
+	margin-right: 20px;
+	margin-top: 30px;
 }
 
 
