@@ -12,7 +12,7 @@
   <div id="welcome-blurb">
       <!-- <h2> A simple lifelogging utility. </h2> -->
       <img src="http://paulcbrunson.com/wp-content/uploads/2014/01/SmilingSelfie.jpg">
-      <h3> Keep a journal with a built-in calendar. </h3>
+      <h3> Click a day of the calendar to add a photo and blurb of the day. </h3>
       <%#= link_to "Authenticate with Google!", '/auth/google_oauth2' %>
  </div>
  </div>
@@ -24,42 +24,7 @@
 </div>
 
 
-
-<!-- Isolation Zone -->
-
-<!-- <div id="login_signup_container">
-
-
-<div id="login_form"><h1> LOGIN </h1>
-  <%#= form_for(@user,{url:sessions_path}) do |f| %> 
-   <%#= f.text_field :email, :placeholder => "Email", :class => "input_field" %>
-   <%#= f.password_field :password, :placeholder => "password", :class => "input_field" %>
-   <%#= f.submit "submit", :class => "submit_button", :id => "submit_login_button"%>
-  <%# end %>
-  <!-- <span class = "close_login_button">cancel</span> -->
-<!-- </div>
-
-<div id="signup_form"> <h1> SIGNUP </h1> -->
-  <%#= form_for(@user) do |f| %>
-  <%#= f.text_field :fullname, :placeholder => "Full Name", :class => "input_field" %>
-  <%#= f.text_field :email, :placeholder => "create email", :class => "input_field" %>
-  <%#= f.password_field :password, :placeholder => "create password", :class => "input_field" %>
-  <%#= f.password_field :password_confirmation, :placeholder => "confirm password", :class => "input_field"%>
-  <%#= f.submit "submit", :class => "submit_button", :id => "submit_signup_button" %>
-  <%# end %>
-  <!-- <span class = "close_signup_button">cancel</span> -->
-<!-- </div>
-</div> --> 
-
-<!-- END Isolation Zone-->
-
-<!-- 
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button> --> 
-
-<!-- Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -86,6 +51,8 @@
 </div>
 
 
+
+<!-- Sign-Up Modal -->
 
 <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">

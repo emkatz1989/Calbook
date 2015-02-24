@@ -1,12 +1,4 @@
 
-<!-- <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#"><%#=current_user.email%></a></li>
-  <li role="presentation"><a href="#">Calbook</a></li>
-  <li role="presentation"><a href="#"><%#= link_to "Log Out", new_session_path("current") %></a></li>
-</ul> -->
-
-
-
 <div id="user_header">
   <div id="email">
     <% if current_user != nil %>
@@ -48,7 +40,7 @@
   <!--   <div id="modal-day"><%#=d.date%></div> -->
     <%= form_for d do |f| %>
      <div id= "image_videos_form">
-        <%= image_tag d.image_videos[0].media.url(:medium), :class => "style_image", alt: "Add Image", width: "400" %>
+        <%= image_tag d.image_videos[0].media.url(:medium), :class => "style_image", alt: "Add Image", height: "400", width: "400" %>
 
 
 
