@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	  if @user.save
   	  	session[:user_id]=@user.id
-  	  	redirect_to days_path(@days), notice: "Sign Up Successful!"
+  	  	redirect_to days_path(@days)
   	  else 
   	  	redirect_to :back
   	  end
